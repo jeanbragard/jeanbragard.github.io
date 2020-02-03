@@ -1,0 +1,95 @@
+*1.        **J. Bragard & G. Lebon.* Non-linear Marangoni convection in
+a layer of finite depth. /Europhys. Le//tt. * 21*/.* *P�s. 831- 838 (1993).
+
+*2.        **J. Bragard & G. Lebon.* Capillary ascension in porous
+media: A scaling law. /Transport in porous media//. *16*/.* *P�s. 253-
+261 (1994).
+
+*3.        **J. Bragard, S. Slavtchev & G. Lebon.* Nonlinear solutal
+Marangoni instability in a liquid layer with an adsorbing upper surface.
+/J. Colloid and Interface Science. *168*/.* *P�s. 402-413 (1994).
+
+*4.        **J. Bragard, J. Pontes & M.G. Velarde.* Patterns, defects
+and evolution of B�ard-Marangoni cells. /Int. J. of Bifurcation and
+Chaos. *6(9). */ P�s. 1665-1671 (1996).
+
+*5.        **J. Bragard & M.G. Velarde.* B�ard convection flows. /J.
+Non-Equilib. //Therm. /*/22. /* P�s. 1-19 (1997).
+
+*6.        **J. Bragard & M.G. Velarde.* B�ard-Marangoni convection :
+planforms and related theoretical predictions. /J. Fluid Mech.// /*/368.
+/* P�s. 165-194 (1998).
+
+*7.        **S. Boccaletti, J. Bragard & F.T. Arecchi.* Controlling and
+synchronizing space-time chaos. / Phys. Rev. E. *59(6). */ P�s.
+6574-6578 (1999).
+
+*8.        **S. Boccaletti, J. Bragard, F.T. Arecchi & H. Mancini.*
+Synchronization in nonidentical extended systems. / Phys. Rev. Lett.
+ *83. */ P�s. 536-539 (1999).
+
+*9.        **J. Bragard, P.L. Ramazza, F.T. Arecchi, S. Boccaletti & L.
+Kramer.* Domain segregation in a two-dimensional system in the presence
+of drift. / Phys. Rev. E. *61. */ P�s. R6045-R6048 (2000).
+
+*10.     **F.T. Arecchi, J. Bragard & L. Castellano.* Dissipative
+dynamics of an open Bose Einstein condensate. / Optics Comm. *179.
+*/ P�s. 149-156 (2000).
+
+*11.     **J. Bragard & S. Boccaletti.* Integral behaviour for localized
+synchronization in nonidentical extended systems. / Phys. Rev. E.
+*62(5). */ P�s. 6346-6351 (2000).
+
+*12.     **J. Bragard, F.T. Arecchi & S. Boccaletti.* Characterization
+of synchronized spatiotemporal states in coupled nonidentical complex
+Ginzburg-Landau equations. /Int. J. of Bifurcation and Chaos. *10(10).
+*/ P�s. 2381-2389 (2000).
+
+*13.     **P.C. Dauby, T. Desaive, J. Bragard & P. Cerisier.* Amplitude
+equations for Rayleigh-B�ard convective rolls far from threshold.
+/ Phys. Rev. E. *64(6). */ P�s. 6301-16301-7 (2001).
+
+*14.     **J. Bragard, S. Boccaletti & F.T. Arecchi.* Control and
+synchronization of space extended systems. /Int. J. of Bifurcation and
+Chaos. *11(11). */ P�s. 2715-2729 (2001).
+
+*15.     **J. Bragard, A. Karma, Y. Lee & M. Plapp.* Linking phase-field
+and atomistic simulations to model dendritic solidification in highly
+undercooled melts. /Interface Science. *10. */ P�s. 121-136 (2002).
+
+*16.     **J. Bragard, S. Boccaletti & H. Mancini.* Asymmetric coupling
+effects in the synchronization of spatially extended chaotic systems.
+/ Phys. Rev. Lett. *91(6). */ P�s. 4103-14103-4 (2003).
+
+*17.     **I. Bove, S. Boccaletti, J. Bragard, J. Kurths & H. Mancini.*
+Frequency entrainment of nonautonomous chaotic oscillators. / Phys. Rev.
+E. *69(1). */ P�s. 6208-16208-4 (2004).
+
+*18.     **A. Bernardini, J. Bragard & H. Mancini.* Synchronization
+between two Hele-Shaw cells. / J. of Mathematical Biosciences and
+Engineering. *1(2). */ P�s. 339-346 (2004).
+
+*19.     **J. Bragard, S. Boccaletti, C. Mendoza, H.G.E. Hentschel & H.
+Mancini.* Synchronization of spatially extended chaotic systems in the
+presence of asymmetric coupling. / Phys. Rev. E. *70(3). */ P�s.
+6219-16219-9 (2004).
+
+*20.     **J. Bragard, E. Montbrio, C. Mendoza, S. Boccaletti & B.
+Blasius.* Defect-enhanced anomaly in frequency synchronization of
+asymmetrically coupled spatially extended systems. / Phys. Rev. E.
+*71(2). */ P�s. R5201-1R5201-4 (2005).
+ 
+*21	**Boccaletti S, Mendoza C, Bragard J
+Synchronization of spatially extended chaotic systems with asymmetric coupling 
+BRAZILIAN JOURNAL OF PHYSICS 35 (2B): 411-417 JUN 2005 .
+
+*22 	**Boccaletti S, Mendoza C, Bragard J
+Anomalous synchronization of spatially extended chaotic systems in the presence of asymmetric coupling 
+FLUCTUATION AND NOISE LETTERS 5 (2): L251-L258 JUN 2005 
+
+*23.     **S. Boccaletti & J. Bragard.* Controlling spatiotemporal
+chaos. / //Proc. of Royal  Soc. London A. *364. */ P�2383--2395 (2006).
+
+*24	** Laroze D, Martinez-Mardones J, Bragard J, Vargas P
+Convection in a rotating binary ferrofluid 
+PHYSICA A-STATISTICAL MECHANICS AND ITS APPLICATIONS 371 (1): 46-49 NOV 1 2006 

@@ -1,0 +1,1000 @@
+  334  cp libfj9i6.so.1 libfj9i6.so.1.OLD
+  335  ls -lt
+  336  su
+  337  cd ~/Programs/FORTRAN
+  338  ls
+  339  lf95 lyaproe.f --verbose --staticlink
+  340  cd /etc
+  341  ls
+  342  vi /etc/ld.so.conf
+  343  su
+  344  cd
+  345  cd Programs/
+  346  ls
+  347  cd FORTRAN/
+  348  ls
+  349  ls -lt
+  350  lf95 lyaproe.f 
+  351  su
+  352  ls
+  353  lf95 lyaproe.f 
+  354  su
+  355  exho $PATH
+  356  echo $PATH
+  357  cd /usr/local/lf95B/
+  358  ls
+  359  cd manuals/
+  360  ls
+  361  cd man/
+  362  ls
+  363  cd lf95/
+  364  ls
+  365  cd man1/
+  366  ls
+  367  ls -lt
+  368  cd ..
+  369  cd /usr/bin/
+  370  ls
+  371  ls ma*
+  372  ls -lt manpath 
+  373  echo $PATH
+  374  cd
+  375  ls
+  376  ls -lt 
+  377  ls .[a-z]*
+  378  vi .bashrc 
+  379  vi .profile 
+  380  more /etc/profile 
+  381  cd .config/
+  382  ls
+  383  cd menus/
+  384  ls
+  385  cd
+  386  vi .bashrc 
+  387  vi .profile 
+  388  echo $SHELL
+  389  vi .bashrc 
+  390  vi .profile 
+  391  echo $PROFILEREAD
+  392  vi .profile 
+  393  more /etc/profile 
+  394  echo $PATH
+  395  vi /etc/profile
+  396  pwd
+  397  exho $PATH
+  398  echo $PATH
+  399  vi .bash_history 
+  400  echo $PATH
+  401  source /etc/profile 
+  402  echo $PATH
+  403  vi .bashrc 
+  404  ls
+  405  ls -lt | more
+  406  ls .[a-z]*
+  407  echo $PROFILEREAD
+  408  echo $PATH
+  409  lf95 
+  410  ls .[a-z]*
+  411  vi .profile 
+  412  vi .bashrc 
+  413  cd /usr/local/lf95B/
+  414  ls
+  415  more csh_setup 
+  416  echo $PATH
+  417  cd 
+  418  cd Programs/
+  419  ls
+  420  cd FORTRAN/
+  421  ls
+  422  lf95 -o lyaproe lyaproe.f 
+  423  ls -lt
+  424  date
+  425  lf95 
+  426  lf95  lyaproe.f  -o lyaproe
+  427  lf95  lyaproe.f  -o lyaproe --verbose
+  428  echo $PATH
+  429  which lf95
+  430  /usr/local/lf95B/bin/lf95
+  431  echo $LD_LIBRARY_PATH
+  432  which lf95
+  433  lf95  lyaproe.f  -o lyaproe --verbose
+  434  lf95  lyaproe.f 
+  435  echo $PATH
+  436  which PATH
+  437  echo $LD_LIBRARY_PATH
+  438  ls .bashrc 
+  439  vi .bashrc 
+  440  echo $PATH
+  441  vi .bashrc 
+  442  source .bashrc 
+  443  echo $PATH
+  444  lf95 
+  445  echo $LD_LIBRARY_PATH
+  446  vi .bashrc 
+  447  echo $LD_LIBRARY_PATH
+  448  source .bashrc 
+  449  echo $LD_LIBRARY_PATH
+  450  lf95 
+  451  cd
+  452  cd Programs/FORTRAN/
+  453  ls
+  454  lf95 lyaproe.f
+  455  ls -lt
+  456  lf95 lyaproe.f -v
+  457  lf95 lyaproe.f -vrbose
+  458  lf95 lyaproe.f -verbose
+  459  lf95 lyaproe.f --verbose
+  460  lf95 lyaproe.f -verbose
+  461  echo $PATH
+  462  echo $LD_LIBRARY_PATH
+  463  ls
+  464  which lf95 
+  465  cd /usr/local/
+  466  ls
+  467  lf95 
+  468  cd
+  469  echo $PATH
+  470  vi .bashrc 
+  471  source .bashrc 
+  472  echo $PATH
+  473  which lf95 
+  474  lf95 
+  475  echo $PATH
+  476  lf95 
+  477  echo $LD_LIBRARY_PATH 
+  478  vi .bashrc 
+  479  source .bashrc 
+  480  echo $PATH
+  481  echo $LD_LIBRARY_PATH 
+  482  cd Programs/
+  483  cd FORTRAN/
+  484  ls
+  485  lf95 lyaproe.f --verbose
+  486  ls -lt
+  487  cd /usr/local/lf9560/
+  488  ls
+  489  cd lib/
+  490  ls -lt
+  491  ls -lt /usr/bin/nm 
+  492  more /etc/syslog.conf 
+  493  more /etc/sysconfig/
+  494  cd /etc/sysconfig/
+  495  ls
+  496  ls -lt
+  497  more named 
+  498  ls
+  499  more suseconfig 
+  500  susehelp 
+  501  susehelp -h
+  502  man susewatcher 
+  503  susewatcher -h
+  504  susewatcher --help
+  505  susewatcher -v
+  506  susehelp -v
+  507  cd /lib/
+  508  ls
+  509  cd /usr/
+  510  cd lib/
+  511  ls
+  512  gcc-lib --help
+  513  gcc
+  514  gcc -v
+  515  find / -name "glib*" -ls
+  516  cd /usr/share/doc/packages/glibc
+  517  ls
+  518  more LICENSES 
+  519  cd
+  520  lf95 
+  521  whereis libc
+  522  cd /usr/lib
+  523  find . -name "libc*" -ñs
+  524  find . -name "libc*" -ls
+  525  ssh -l jbragard abaco.fisica.unav.es
+  526  vi /etc/ld.so.conf 
+  527  more /etc/ld.so.conf
+  528  su
+  529  cd Programs/FORTRAN/
+  530  ls
+  531  lf95 lyaproe.f 
+  532  ls -lt 
+  533  lf95 lyaproe.f -o lyaproe
+  534  ls
+  535  lf95 lyaproe.f -o lyaproe
+  536  ls
+  537  lf95 lyaproe.f
+  538  ls -lt
+  539  lf95 lyaproe.f -o lyaproe
+  540  lf95 lyaproe.f -o lyaproe --verbose
+  541  echo $PATH
+  542  echo $LD_LIBRARY_PATH
+  543  cd /usr/local/
+  544  ls
+  545  cd imsl/
+  546  ls
+  547  cd lib/
+  548  ls
+  549  cd lf95/
+  550  ls
+  551  which lf95
+  552  whereis lf95
+  553  echo $PATH
+  554  cd /usr/local/
+  555  ls
+  556  su
+  557  ls l*
+  558  cd Programs/
+  559  cd FORTRAN/
+  560  ls
+  561  cd GERARD/
+  562  ls -lt *.f
+  563  lf95 -o asimroesl2 asimroesl.f
+  564  ls -lt
+  565  ls -lt as*
+  566  date
+  567  lf95 -o asimroesl2 asimroesl.f --verbose
+  568  lf95  asimroesl.f --verbose
+  569  cd /usr/local/lf9560/
+  570  ls
+  571  cd bin/
+  572  ls
+  573  ls -lt
+  574  more lf95 
+  575  cd ..
+  576  cd examples/
+  577  ls
+  578  cd fortran/
+  579  ls
+  580  more demo.f90 
+  581  cd ..
+  582  ls
+  583  more IO_ERROR 
+  584  ls
+  585  more ERRATA 
+  586  ls
+  587  more lf9560x_file.log 
+  588  ls
+  589  cd update/
+  590  ls
+  591  cd ..
+  592  ls
+  593  more LICENSE 
+  594  ls
+  595  cd Programs/
+  596  cd FORTRAN/
+  597  cd GERARD/
+  598  ls
+  599  ls *.f
+  600  /usr/local/lf9562/bin/lf95
+  601  pwd
+  602  LSERVRC=/usr/local/lf9562/bin/lservc
+  603  export LSERVRC
+  604  echo $LSERVRC
+  605  echo $PATH
+  606  PATH=/usr/local/lf9562/bin:$PATH
+  607  export PATH
+  608  echo $PATH
+  609  lf95
+  610  which lf95
+  611  lf95
+  612  echo $LD_LIBRARY_PATH
+  613  LD_LIBRARY_PATH=/usr/local/lf9562/lib
+  614  export LD_LIBRARY_PATH
+  615  echo $LD_LIBRARY_PATH
+  616  lf95
+  617  which libc
+  618  where libc
+  619  whereis libc
+  620  /usr/lib/libc.so
+  621  vi testlib.c
+  622  gcc testlib.c 
+  623  ls -lt | more
+  624  /a.out
+  625  a.out 
+  626  su
+  627  rm kdevelop3-*
+  628  ps
+  629  top
+  630  ps -elf
+  631  ps -elf | grep yast
+  632  xmgrace -v
+  633  ftp gd.tuwien.ac.at
+  634  ftp ftp.rediris.es
+  635  su
+  636  cd /usr/local/lf9560/
+  637  ls
+  638  cd examples/
+  639  ls
+  640  cd fortran/
+  641  ls
+  642  lf95 demo.f90 
+  643  ls -lt
+  644  lf95 
+  645  ls
+  646  f95 demo.f90 
+  647  lf95 demo.f90 
+  648  ls -lt
+  649  lf95 demo.f90  --verbose
+  650  echo $PATH
+  651  whereis lf95
+  652  which lf95
+  653  echo $LD_LIBRARY_PATH
+  654  which lf95
+  655  lf95 demo.f90  --verbose
+  656  ls -lt
+  657  lf95 demo.f90  --verbose
+  658  ls
+  659  lf95 
+  660  ls
+  661  ls -lt
+  662  lf95 demo.f90 --verbose
+  663  ls
+  664  cd ..
+  665  cd bin/
+  666  ls
+  667  ls -lt
+  668  jwd_fort 
+  669  echo $LD_LIBRARY_PATH
+  670  ls
+  671  jwd_fort 
+  672  ls -lt
+  673  f95 
+  674  lf95 demo.f90 --verbose
+  675  lf95
+  676  jwd_fort 
+  677  g77 
+  678  ls
+  679  cd ../examples/
+  680  ls
+  681  cd fortran/
+  682  ls
+  683  g77 
+  684  g77 --help
+  685  gcc -v
+  686  ls
+  687  g77 demo.f90 
+  688  ls -lt
+  689  vi test.f
+  690  ls
+  691  g77 test.f 
+  692  ls
+  693  ls -lt
+  694  ./a.out 
+  695  g77 test.f -static
+  696  ls -lt
+  697  ./a.out 
+  698  find / -name "frt" -ls
+  699  lf95 test.f 
+  700  ls -lt
+  701  lf95 test.f -verbose
+  702  lf95 test.f --verbose
+  703  jwd_fort 
+  704  ls ../../lib/
+  705  ls ../../lib/ -lt
+  706  more libfst.a
+  707  more ../../libfst.a
+  708  more ../../lib/libfst.a
+  709  ls
+  710  lf95 
+  711  ls
+  712  lf95 test.f 
+  713  ls -lt
+  714  date
+  715  ssh -l jbragard abaco.fisica.unav.es -X
+  716  su
+  717  lf95 
+  718  vi test.f
+  719  lf95 test.f 
+  720  ls -lt t*
+  721  jwd_fort 
+  722  zfgrep 
+  723  find / -name "frt" -ls
+  724  ls t*
+  725  lf95 test.f 
+  726  jwd_fort 
+  727  jwd_fort --verbose
+  728  jwd_fort -help
+  729  jwd_fort --help
+  730  man jwd_fort
+  731  lf95 test.f --verbose
+  732  f95 
+  733  jwd_fort 
+  734  ulimit 
+  735  uname 
+  736  uname -r
+  737  checkndx 
+  738  man checkhardware
+  739  CheckHardware 
+  740  CheckHardware lf95
+  741  ulimit -a
+  742  lf95 test.f
+  743  ls -lt | more
+  744  ls
+  745  jwd_fort 
+  746  lf95 test.f --verbose
+  747  ls -lt | more
+  748  a.out 
+  749  lf95 test.f --verbose --staticlink
+  750  vi t.c
+  751  gcc -static t.c -lncurses
+  752  lf95 test.f --verbose --staticlink
+  753  lf95 test.f --verbose -o test1
+  754  ./test1 
+  755  lf95 test.f --verbose -o test1
+  756  ./test1 
+  757  lf95 test.f --verbose --staticlink
+  758  gcc -static t.c -lncurses
+  759  ls -lt | more
+  760  ./a.out 
+  761  quit
+  762  exit
+  763  lf95 
+  764  lf95 test.f -o test2 --verbose
+  765  ls -lt | more
+  766  ./test2
+  767  lf95 test.f -o test2 --verbose --staticlink
+  768  ls -lt | more
+  769  lf95 test.f -o test2 --verbose --static
+  770  ls -lt t*
+  771  ./test2 
+  772  lf95 test.f -o test2 --verbose --staticlink
+  773  netstat 
+  774  lf95 test.f -o test2 --verbose --staticlink
+  775  exit
+  776  lf95 test.f -o test2 --verbose --staticlink
+  777  lf95 test.f -o test2 --verbose 
+  778  ./test2
+  779  echo LD_LIBRARY
+  780  echo LD_LIBRARY_PATH
+  781  echo $LD_LIBRARY_PATH
+  782  vi /etc/ld.so.conf 
+  783  lf95 test.f -o test2 --verbose 
+  784  lf95 test.f -o test2 --verbose --staticlink
+  785  f95 
+  786  lf95 
+  787  lf95
+  788  ls -lt t*
+  789  lf95 test.f -o test2 --verbose 
+  790  ls -lt t*
+  791  ./test2
+  792  vi test.f 
+  793  lf95 test.f -o test2 --verbose 
+  794  ./test2
+  795  lf95 test.f /usr/local/lib/libnetcdf.a -o test2 --verbose 
+  796  ./test2
+  797  lf95 test.f /usr/lib/libnetcdf.a  -o test2 --verbose 
+  798  ./test2
+  799  lf95 test.f /usr/lib/libnetcdf.a  -o test2 --verbose --staticlink
+  800  lf95 test.f /usr/local/lib/libnetcdf.a -o test2 --verbose --staticlink
+  801  lf95 test.f /usr/local/lib/libnetcdf.a -o test2 --verbose 
+  802  ./test2 
+  803  lf95 test.f /usr/local/lib/libnetcdf.a -o test2 --verbose 
+  804  ./test2 
+  805  lf95 
+  806  lf95 test.f /usr/local/lib/libnetcdf.a -o test2 --verbose --staticlink
+  807  lf95 test.f /usr/local/lib/libnetcdf.a -o test2 --verbose --staticlink -L/usr/local/lf9560/libABACO
+  808  lf95 test.f /usr/local/lib/libnetcdf.a -o test2 --verbose  -L/usr/local/lf9560/libABACO
+  809  ./test2 
+  810  lf95 test.f /usr/local/lib/libnetcdf.a -o test2 --verbose  -L /usr/local/lf9560/libABACO
+  811  lf95 test.f /usr/local/lib/libnetcdf.a -o test2 --verbose --staticlink -L /usr/local/lf9560/libABACO
+  812  lf95 test.f /usr/local/lib/libnetcdf.a /usr/local/lf9560/libABACO/fj90rt0.o -o test2 --verbose --staticlink -L /usr/local/lf9560/libABACO
+  813  lf95 test.f /usr/local/lib/libnetcdf.a -Qy/usr/local/lf9560/libABACO/fj90rt0.o -o test2 --verbose --staticlink -L /usr/local/lf9560/libABACO
+  814  lf95 test.f -Qy/usr/local/lf9560/libABACO/fj90rt0.o -o test2 --verbose --staticlink -L /usr/lo
+  815  ls -lt /usr/local/lib/* | more
+  816  ls -lt /usr/local/lib/lib* | more
+  817  cd
+  818  pwd
+  819  mkdir OLDXMGR
+  820  cd OLDXMGR/
+  821  ls
+  822  cd bin/
+  823  ls
+  824  ls -lt
+  825  ./xmgr-semistatic 
+  826  ./xmgr-dynamic 
+  827  ls
+  828  cd ../lib/
+  829  ls
+  830  cp libacegr_np.a ../bin/.
+  831  cd ../bin/
+  832  ls
+  833  ./xmgr-semistatic 
+  834  ls -lt
+  835  cd ..
+  836  ls -lt
+  837  mv xmgr.semistatic bin/.
+  838  ls
+  839  cd bin/
+  840  ls
+  841  ./xmgr.semistatic 
+  842  ls
+  843  rm xmgr-semistatic
+  844  ./xmgr.semistatic 
+  845  vi dad.dat
+  846  ./xmgr.semistatic  dad.dat
+  847  ls
+  848  ./xmgr.semistatic 
+  849  cd 
+  850  mkdir NETCDF_RH71
+  851  cd NETCDF_RH71/
+  852  pwd
+  853  ls -lt
+  854  pwd
+  855  lf95 test.f /home/jbragard/NETCDF_RH71/libnetcdf.a -o test2 --verbose --staticlink 
+  856  cd
+  857  lf95 test.f /home/jbragard/NETCDF_RH71/libnetcdf.a -o test2 --verbose --staticlink 
+  858  ls
+  859  ls f*
+  860  ls f2*
+  861  cd NETCDF_RH71/
+  862  ls -lt
+  863  find / -name "*netcdf*" -ls
+  864  lf95 test.f -o test2 --verbose --staticlink
+  865  cd
+  866  lf95 test.f -o test2 --verbose --staticlink  -L/home/jbragard/NETCDF_RH71
+  867  ls
+  868  vi ctype_workaround.c
+  869  gcc -c ctype_workaround.c 
+  870  ls -lt ct*
+  871  vi ctype_wa.c
+  872  lf95 -c ctype_wa.c 
+  873  ls -lt | more
+  874  gcc -c ctype_wa.c 
+  875  gcc -c ctype_workaround.c 
+  876  ls -lt ct*
+  877  lf95
+  878  ls -lt t*
+  879  rm test.o 
+  880  ls -lt t*
+  881  lf95 test.f 
+  882  ls -lt | more
+  883  ./a.out 
+  884  ls -lt t*
+  885  lf95 -c test.f
+  886  ls -lt t*
+  887  lf95 test.o ctype_workaround.o -o test.exe
+  888  ls -lt t*
+  889  ./test.exe 
+  890  lf95 test.o ctype_workaround.o -o test.exe --staticlink
+  891  ls -lt t*
+  892  ./test.exe 
+  893  su
+  894  ls
+  895  xv ver02.jpg 
+  896  rm Posturitas*
+  897  ls
+  898  rm Re\:\ memoria.html 
+  899  ls
+  900  rm OpenOffice.org1.1*
+  901  rm OpenOffice.org1.1* -r
+  902  df -k
+  903  ls
+  904  rm -r NETCDF_RH71/*
+  905  ls
+  906  cd MOVIES/
+  907  ls
+  908  realplay wl-802-lec6-220k.rm 
+  909  find / -name "wl-*" -ls
+  910  cd ..
+  911  ls
+  912  cd PUBLICATIONS/
+  913  ls
+  914  cd PINNINGOPTICSMBE/
+  915  ls
+  916  mkdir V4
+  917  cd V4
+  918  pwd
+  919  ls
+  920  unzip pinning4.zip 
+  921  ls
+  922  acroread CMpaper3b.pdf 
+  923  lpq
+  924  lpq -a
+  925  lpstat -a
+  926  ls
+  927  latex CMpaper3b.tex 
+  928  cd ..
+  929  ls
+  930  cp MBE.cls V4/.
+  931  cd V4/
+  932  latex CMpaper3b.tex 
+  933  ls  -lt
+  934  xdvi CMpaper3b.dvi 
+  935  dvips -o CMpaper3b.ps CMpaper3b.dvi 
+  936  ls -lt
+  937  lpr -Plasercolor CMpaper3b.ps
+  938  gnuplot
+  939  gnuplot_x11 
+  940  l
+  941  man tisean
+  942  echo $PATH
+  943  vi .bashrc 
+  944  echo $PATH
+  945  cd /root/bin
+  946  echo $PATH
+  947  cd /root/
+  948  cd /root/bin
+  949  /root/bin/lyap
+  950  /root/bin/lyap*
+  951  /root/bin/lyap_k
+  952  echo $PATH
+  953  cd /usr/bin
+  954  ls
+  955  vi /etc/profile 
+  956  vi .bashrc 
+  957  echo $PATH
+  958  su
+  959  ls /root/bin/*
+  960  lyap_k 
+  961  ssh -l jbragard gauss.fisica.unav.es -X
+  962  ls
+  963  cd Programs/
+  964  ls
+  965  cd FORTRAN/
+  966  ls
+  967  cd GERARD/
+  968  ls
+  969  mkdir RESULTS
+  970  cd RESULTS/
+  971  pwd
+  972  ls
+  973  man scp
+  974  ls
+  975  cd Programs/
+  976  cd ..
+  977  cd RESEARCH/
+  978  cd BLASHEART/
+  979  ls
+  980  cd JOAQUIN/
+  981  ls
+  982  cd 2006Jean/
+  983  ls
+  984  cd 20060918/
+  985  ls
+  986  scp * jbragard@gauss.fisica.unav.es:/mnt/hde3/home2/jbragard/HEARTPROJECT/JOAQUIN/.
+  987  ls -lt
+  988  gnuplot 
+  989  vi dada.dat
+  990  gnuplot dada.dat 
+  991  man gnuplot
+  992  gnuplot
+  993  xmgrace dada.dat 
+  994  gunzip auto2000-0.9.8.pdf.gz 
+  995  acroread auto2000-0.9.8.pdf 
+  996  ls -lt auto*
+  997  rm auto07p-0.2.tar.gz
+  998  su 
+  999  cd ..
+ 1000  cd OLDCOLBERT/
+ 1001  find . -name "fig*.tes" -ls
+ 1002  find . -name "fig*.tex" -ls
+ 1003  cd BACKUPCOLB/ARTICLES/
+ 1004  find . -name "fig*.tex" -ls
+ 1005  cd ANGELA/POSTERFLORENCE/
+ 1006  ls
+ 1007  vi figpuro21.tex 
+ 1008  cd ..
+ 1009  cd FIGURES/
+ 1010  ls
+ 1011  gv figpuro21.ps 
+ 1012  vi fighm6.tex 
+ 1013  cd ..
+ 1014  find . -name "fi*.tex" -ls
+ 1015  find . -name "f*.tex" -ls
+ 1016  cd ./SIMUL/MORESIMUL/DEF9PTS/CHSYSSIZE/AT/
+ 1017  ls
+ 1018  vi fispatime.tex
+ 1019  cd /home/
+ 1020  find . -name "fi*.tex" -ls
+ 1021  find . -name "art*.tex" -ls
+ 1022  cd jbragard/
+ 1023  ls
+ 1024  cd PUBLICATIONS/
+ 1025  ls
+ 1026  find . -name "*.tex" -ls
+ 1027  cd SCHOELLHANDBOOK/
+ 1028  ls
+ 1029  cd ..
+ 1030  mkdir LYAPSINCRO
+ 1031  cp SCHOELLHANDBOOK/b*.tex LYAPSINCRO/.
+ 1032  cd LYAPSINCRO/.
+ 1033  ls
+ 1034  mv boccacontrol.tex lyapsync.tex
+ 1035  vi lyapsync.tex 
+ 1036  latex lyapsync.tex 
+ 1037  ls -lt
+ 1038  xdvi lyapsync.dvi 
+ 1039  acroread graficas.pdf 
+ 1040  bg
+ 1041  ls
+ 1042  openoffice.org-2.0 
+ 1043  bg
+ 1044  ls
+ 1045  mv ~/roessl.eps  .
+ 1046  ls
+ 1047  ls -lt
+ 1048  gv roessl.eps
+ 1049  vi lyapsync.tex 
+ 1050  latex lyapsync.tex 
+ 1051  xdvi lyapsync.dvi 
+ 1052  vi lyapsync.tex 
+ 1053  latex lyapsync.tex 
+ 1054  xdvi lyapsync.dvi 
+ 1055  vi lyapsync.tex 
+ 1056  xdvi lyapsync.dvi 
+ 1057  ls
+ 1058  cp ~/Programs/FORTRAN/GERARD/RESULTS/*.eps .
+ 1059  ls
+ 1060  gv lyap1A.eps
+ 1061  ls
+ 1062  xdvi lyapsync.dvi 
+ 1063  vi lyapsync.tex
+ 1064  latex lyapsync.tex 
+ 1065  dvips -o lyapsync.ps lyapsync.dvi 
+ 1066  gv lyapsync.ps 
+ 1067  vi lyapsync.tex
+ 1068  latex lyapsync.tex 
+ 1069  vi lyapsync.tex
+ 1070  latex lyapsync.tex 
+ 1071  xdvi lyapsync.dvi 
+ 1072  vi lyapsync.tex
+ 1073  latex lyapsync.tex 
+ 1074  xdvi lyapsync.dvi 
+ 1075  vi lyapsync.tex
+ 1076  latex lyapsync.tex 
+ 1077  xdvi lyapsync.dvi 
+ 1078  vi lyapsync.tex
+ 1079  latex lyapsync.tex 
+ 1080  xdvi lyapsync.dvi 
+ 1081  vi lyapsync.tex
+ 1082  ls
+ 1083  vi lyapsync.tex
+ 1084  latex lyapsync.tex 
+ 1085  xdvi lyapsync.dvi 
+ 1086  vi lyapsync.tex
+ 1087  latex lyapsync.tex 
+ 1088  xdvi lyapsync.dvi 
+ 1089  vi lyapsync.tex
+ 1090  latex lyapsync.tex 
+ 1091  dvips -o lyapsync.ps lyapsync.dvi 
+ 1092  gv lyapsync.ps 
+ 1093  vi lyapsync.tex
+ 1094  latex lyapsync.tex 
+ 1095  dvips -o lyapsync.ps lyapsync.dvi 
+ 1096  gv lyapsync.ps 
+ 1097  vi lyapsync.tex
+ 1098  latex lyapsync.tex 
+ 1099  dvips -o lyapsync.ps lyapsync.dvi 
+ 1100  gv lyapsync.ps 
+ 1101  vi lyapsync.tex
+ 1102  latex lyapsync.tex 
+ 1103  dvips -o lyapsync.ps lyapsync.dvi 
+ 1104  gv lyapsync.ps 
+ 1105  vi lyapsync.tex
+ 1106  latex lyapsync.tex 
+ 1107  dvips -o lyapsync.ps lyapsync.dvi 
+ 1108  vi lyapsync.tex
+ 1109  latex lyapsync.tex 
+ 1110  dvips -o lyapsync.ps lyapsync.dvi 
+ 1111  vi lyapsync.tex
+ 1112  latex lyapsync.tex 
+ 1113  dvips -o lyapsync.ps lyapsync.dvi 
+ 1114  gv lyapsync.ps 
+ 1115  vi lyapsync.tex
+ 1116  latex lyapsync.tex 
+ 1117  dvips -o lyapsync.ps lyapsync.dvi 
+ 1118  vi lyapsync.tex
+ 1119  dvips -o lyapsync.ps lyapsync.dvi 
+ 1120  latex lyapsync.tex 
+ 1121  dvips -o lyapsync.ps lyapsync.dvi 
+ 1122  vi lyapsync.tex
+ 1123  latex lyapsync.tex 
+ 1124  dvips -o lyapsync.ps lyapsync.dvi 
+ 1125  vi lyapsync.tex
+ 1126  latex lyapsync.tex 
+ 1127  dvips -o lyapsync.ps lyapsync.dvi 
+ 1128  vi lyapsync.tex
+ 1129  latex lyapsync.tex 
+ 1130  dvips -o lyapsync.ps lyapsync.dvi 
+ 1131  vi lyapsync.tex
+ 1132  latex lyapsync.tex 
+ 1133  dvips -o lyapsync.ps lyapsync.dvi 
+ 1134  vi lyapsync.tex
+ 1135  latex lyapsync.tex 
+ 1136  dvips -o lyapsync.ps lyapsync.dvi 
+ 1137  gv lyapsync.ps 
+ 1138  vi lyapsync.tex
+ 1139  ls
+ 1140  gv lyap1A.eps
+ 1141  vi lyap1A.eps 
+ 1142  gv lyap1A.eps
+ 1143  vi lyap1A.eps 
+ 1144  gv lyap1A.eps
+ 1145  vi lyap1A.eps 
+ 1146  gv lyap1A.eps
+ 1147  vi lyap2A.eps 
+ 1148  vi lyap3A.eps 
+ 1149  vi lyap4A.eps 
+ 1150  vi lyap5A.eps 
+ 1151  vi lyap6A.eps 
+ 1152  vi lyapsync.tex 
+ 1153  latex lyapsync.tex 
+ 1154  dvips -o lyapsync.ps lyapsync.dvi 
+ 1155  gv lyap1A.eps
+ 1156  gv lyapsync.ps 
+ 1157  vi lyapsync.tex 
+ 1158  latex lyapsync.tex 
+ 1159  dvips -o lyapsync.ps lyapsync.dvi 
+ 1160  gv lyapsync.ps 
+ 1161  vi lyapsync.tex 
+ 1162  latex lyapsync.tex 
+ 1163  dvips -o lyapsync.ps lyapsync.dvi 
+ 1164  vi lyapsync.tex 
+ 1165  latex lyapsync.tex 
+ 1166  dvips -o lyapsync.ps lyapsync.dvi 
+ 1167  gv lyapsync.ps 
+ 1168  gv lyap1A.eps 
+ 1169  vi lyapsync.tex 
+ 1170  latex lyapsync.tex 
+ 1171  dvips -o lyapsync.ps lyapsync.dvi 
+ 1172  gv lyap1A.eps 
+ 1173  gv lyapsync.ps 
+ 1174  vi lyapsync.tex 
+ 1175  latex lyapsync.tex 
+ 1176  vi lyapsync.tex 
+ 1177  latex lyapsync.tex 
+ 1178  dvips -o lyapsync.ps lyapsync.dvi 
+ 1179  gv lyapsync.ps 
+ 1180  vi lyapsync.tex 
+ 1181  latex lyapsync.tex 
+ 1182  dvips -o lyapsync.ps lyapsync.dvi 
+ 1183  gv lyapsync.ps 
+ 1184  vi lyapsync.tex 
+ 1185  latex lyapsync.tex 
+ 1186  dvips -o lyapsync.ps lyapsync.dvi 
+ 1187  gv lyapsync.ps 
+ 1188  vi lyapsync.tex 
+ 1189  latex lyapsync.tex 
+ 1190  dvips -o lyapsync.ps lyapsync.dvi 
+ 1191  gv lyapsync.ps 
+ 1192  vi lyapsync.tex 
+ 1193  latex lyapsync.tex 
+ 1194  vi lyapsync.tex 
+ 1195  latex lyapsync.tex 
+ 1196  dvips -o lyapsync.ps lyapsync.dvi 
+ 1197  dvipdf -o lyapsync.pdf lyapsync.dvi 
+ 1198  dvipdfm -o lyapsync.pdf lyapsync.dvi 
+ 1199  dvipdft -o lyapsync.pdf lyapsync.dvi 
+ 1200  ps2pdf lyapsync.ps -o lyapsync.pdf
+ 1201  ps2pdf lyapsync.ps  lyapsync.pdf
+ 1202  ls -lt l*
+ 1203  acroread lyapsync.pdf
+ 1204  ls
+ 1205  vi lyapsync.tex 
+ 1206  latex lyapsync.tex 
+ 1207  dvipdft -o lyapsync.pdf lyapsync.dvi 
+ 1208  ls -lt l*
+ 1209  acroread lyapsync.pdf
+ 1210  vi lyapsync.tex
+ 1211  latex lyapsync.tex 
+ 1212  dvipdft -o lyapsync.pdf lyapsync.dvi 
+ 1213  !
+ 1214  acroread lyapsync.pdf
+ 1215  ls -lt | more
+ 1216  vi lyapsync.tex
+ 1217  latex lyapsync.tex 
+ 1218  ls 
+ 1219  vi lyapsync.tex
+ 1220  latex lyapsync.tex 
+ 1221  dvipdft -o lyapsync.pdf lyapsync.dvi 
+ 1222  acroread lyapsync.pdf
+ 1223  vi lyapsync.tex
+ 1224  ls -lt | more
+ 1225  vi lyapsync.tex 
+ 1226  latex lyapsync.tex 
+ 1227  vi lyapsync.tex 
+ 1228  latex lyapsync.tex 
+ 1229  dvipdft -o lyapsync.pdf lyapsync.dvi 
+ 1230  acroread lyapsync.pdf
+ 1231  vi lyapsync.tex 
+ 1232  latex lyapsync.tex 
+ 1233  xdvi lyapsync.dvi 
+ 1234  vi lyapsync.tex 
+ 1235  ls l*
+ 1236  latex lyapsync.tex 
+ 1237  dvipdft -o lyapsync.pdf lyapsync.dvi 
+ 1238  acroread lyapsync.pdf
+ 1239  vi lyapsync.tex 
+ 1240  gv lyap1B.eps 
+ 1241  vi lyapsync.tex 
+ 1242  acroread lyapsync.pdf
+ 1243  vi lyapsync.tex 
+ 1244  latex lyapsync.tex 
+ 1245  vi lyapsync.tex 
+ 1246  latex lyapsync.tex 
+ 1247  vi lyapsync.tex 
+ 1248  latex lyapsync.tex 
+ 1249  dvipdft -o lyapsync.pdf lyapsync.dvi 
+ 1250  acroread lyapsync.pdf
+ 1251  pwd
+ 1252  ls l*
+ 1253  ls -lt *.pdf
+ 1254  cd ..
+ 1255  ls
+ 1256  cd PINNINGOPTICSMBE/
+ 1257  ls
+ 1258  ls -lt
+ 1259  cd V4
+ 1260  ls -lt
+ 1261  latex CMpaper3b.tex
+ 1262  ls -lt
+ 1263  xdvi CMpaper3b.dvi
+ 1264  vi CMpaper3b.tex
+ 1265  latex CMpaper3b.tex 
+ 1266  xdvi CMpaper3b.dvi
+ 1267  vi CMpaper3b.tex
+ 1268  latex CMpaper3b.tex 
+ 1269  dvipdft -o lyapsync.pdf lyapsync.dvi 
+ 1270  dvipdft -o CMpaper3b.pdf CMpaper3b.dvi
+ 1271  ls -lt
+ 1272  acroread CMpaper3b.pdf
+ 1273  dvips -o CMpaper3b.ps CMpaper3b.dvi
+ 1274  ls -lt
+ 1275  mv pinning4.zip ../.
+ 1276  ls
+ 1277  ls -lt
+ 1278  man zip
+ 1279  cd ..
+ 1280  ls
+ 1281  zip pinning5.zip V4/*
+ 1282  ls
+ 1283  ls -lt
+ 1284  cp pinning5.zip ../
+ 1285  ls
+ 1286  mkdir PRUEBA
+ 1287  ls
+ 1288  mv pinning5.zip PRUEBA/.
+ 1289  ls
+ 1290  cd PRUEBA/
+ 1291  ls
+ 1292  unzip pinning5.zip 
+ 1293  ls
+ 1294  cd V4/
+ 1295  ls
+ 1296  ls -lt
+ 1297  acroread CMpaper3b.pdf
+ 1298  cd ..
+ 1299  ls
+ 1300  cd ..
+ 1301  pwd
+ 1302  ls
+ 1303  rm pinning5.zip 
+ 1304  ls
+ 1305  cd PINNINGOPTICSMBE/
+ 1306  ls
+ 1307  cd V4/
+ 1308  ls
+ 1309  man aspell
+ 1310  aspell --lang=en -c CMpaper3b.tex
+ 1311  ls -lt
+ 1312  date
+ 1313  dvips -o CMpaper3b.ps CMpaper3b.dvi
+ 1314  ls -lt
+ 1315  dvipdft -o CMpaper3b.pdf CMpaper3b.dvi
+ 1316  ls -lt
+ 1317  acroread CMpaper3b.pdf
+ 1318  aspell --lang=en -c CMpaper3b.tex
+ 1319  latex CMpaper3b.tex 
+ 1320  dvipdft -o CMpaper3b.pdf CMpaper3b.dvi
+ 1321  dvips -o CMpaper3b.ps CMpaper3b.dvi
+ 1322  ls -lt
+ 1323  cd ..
+ 1324  zip pinning5.zip V4/*
+ 1325  ls 
+ 1326  cd ..
+ 1327  ls
+ 1328  cd PUBLIJB/
+ 1329  ls
+ 1330  ls -lt 
+ 1331  acroread PRE69P6208.pdf
+ 1332  history
+ 1333  history > toto 
