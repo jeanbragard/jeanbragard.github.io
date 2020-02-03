@@ -1,0 +1,154 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+
+  
+  <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1"><!-- base href="http://www.fisica.unav.es/~jbragard/research100.html" --><title>J. Bragard's research interest (Ongoing)</title></head><body style="background-image: url(publi_nonref_files/sand.gif);">
+<center>
+<h1>Connexins dynamics</h1>
+</center>
+
+<span style="font-weight: bold;"></span>In the study of the cardiac
+wave propagation, one encounters an important ingredient in the
+modeling:<br>
+
+these are the Gap Junctions (GJ) that connect electrically neighboring
+myocytes.<br>
+
+The GJ are formed with different types of connexins and the connexins
+dynamics <br>
+
+has been studied in careful physiological experiments [1].<br>
+
+<br>
+
+<table style="text-align: left; width: 800px; height: 290px;" border="1" cellpadding="2" cellspacing="2">
+
+  <tbody>
+    <tr>
+      <td style="text-align: justify;">Gap junctions are important in
+cardiac muscle: the signal to contract is passed efficiently through
+gap junctions, allowing the heart muscle cells to contract in unison.
+The GJ are formed with several types of connexins. The equation that
+governs the dynamics can be modeled simply as follows:<br>
+      <br>
+      <a href="http://www.codecogs.com/eqnedit.php?latex=%5Cdpi%7B300%7D&amp;space;%5Cfrac%7Bdg_%7Bi%7D%7D%7Bdt%7D&amp;space;=&amp;space;%5Cfrac%7Bg_%7Bi,ss%7D&amp;space;%0A%28%5CDelta&amp;space;%5Cphi%29&amp;space;-&amp;space;g_i%7D%7B%5Ctau_g&amp;space;%28%5CDelta&amp;space;%5Cphi%29%7D" target="_blank"> </a>
+      <div style="text-align: center;"><a href="http://www.codecogs.com/eqnedit.php?latex=%5Cdpi%7B300%7D&amp;space;%5Cfrac%7Bdg_%7Bi%7D%7D%7Bdt%7D&amp;space;=&amp;space;%5Cfrac%7Bg_%7Bi,ss%7D&amp;space;%0A%28%5CDelta&amp;space;%5Cphi%29&amp;space;-&amp;space;g_i%7D%7B%5Ctau_g&amp;space;%28%5CDelta&amp;space;%5Cphi%29%7D" target="_blank"><img style="width: 212px; height: 65px;" src="http://latex.codecogs.com/gif.latex?%5Cdpi%7B300%7D&amp;space;%5Cfrac%7Bdg_%7Bi%7D%7D%7Bdt%7D&amp;space;=&amp;space;%5Cfrac%7Bg_%7Bi,ss%7D&amp;space;%0A%28%5CDelta&amp;space;%5Cphi%29&amp;space;-&amp;space;g_i%7D%0A%7B%5Ctau_g&amp;space;%28%5CDelta&amp;space;%5Cphi%29%7D" title="\frac{dg_{i}}{dt} = \frac{g_{i,ss} (\Delta \phi) - g_i}{\tau_g (\Delta \phi)}"></a>
+&nbsp; &nbsp;&nbsp; (Equation 1) <br>
+      </div>
+      <p>&nbsp;where &#916;&#934; denotes the difference in intra-cellular
+electrical potential between two adjacent cells.&nbsp; The subindice <small>ss</small>
+indicates the steady state value and &#964;<small>g</small> is the time
+scale associated with the dynamics and it depends also on &#916;&#934;.</p>
+Below we show the characteristic functions that are essential
+ingredients for our modeling purpose.<br>
+      </td>
+      <td><img style="width: 255px; height: 332px;" src="connexins_cartoon.png" alt=""></td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
+
+  <tbody>
+    <tr>
+      <td style="vertical-align: top; text-align: center;"><span style="font-weight: bold;">Steady state characteristic</span><br>
+      </td>
+      <td style="vertical-align: top; text-align: center;"><span style="font-weight: bold;">Time constant</span><br>
+      </td>
+      <td style="vertical-align: top; text-align: center;"><span style="font-weight: bold;">Action potential</span><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;"><img style="width: 396px; height: 306px;" alt="connexin" src="fig_conexin_gjss.png"><br>
+      </td>
+      <td style="vertical-align: top; text-align: center;"><img style="width: 396px; height: 306px;" alt="timeconstant" src="fig_conexin_taug.png"><br>
+      </td>
+      <td style="vertical-align: top;"><img style="width: 396px; height: 306px;" alt="apvmem" src="fig_final_up_VMEM.png"><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<center>
+</center>
+
+<h2 align="left">Some examples of connexins dynamics<br>
+</h2>
+
+<p align="left">In the following, I illustrate the dynamics of a strand
+of connexins (1D system) that is periodically excited by a propagating
+action potential. The interesting phenomena occur when the
+characteristics of the connexins are set to mimick a diseased cardiac
+tissue (ischemic situation). One can lower the overall conductivity (to
+40% of its nominal value) and we can also shrink the range of &#916;&#934; for
+which the connexin steady state is close to its maximum value as
+illustrated in the figure below</p>
+
+<p align="left"><img style="width: 388px; height: 300px;" alt="fsdefine" src="fig_conductanceVSFS_WEB.png"></p>
+
+<p align="left">The newly introduced "shrinking factor" FS quantifies
+the degree by which the plateau of the steady state connexin
+characteristics is reduced. We have done several&nbsp; "exploratory"
+simulations by varying this factor FS and the results are shown below
+for 5 different values of the FS. In addition to the space time plots
+showing the value of the connexin after each stimulation (Period=480
+ms) we have also created some animations that are showing the evolution
+in the "phase" plane (g, &#916;&#934;) of the different connexins. We have two
+"stroboscopic" measurements corresponding to the two hallmarks (h1 and
+h2) represented in the figure above of the propagating action
+potential. In the animations, the cloud of points on the left
+corresponds to h1 (depolarization) and the cloud of points on the right
+corresponds to h2 (repolarization). The color code used to represent
+the points in the plane (g, &#916;&#934;) codifies the "residence time" (units
+are ms), i.e., the time it takes for the wave to travel between two
+adjacent cells surrounding the given connexin. More details of this
+study and the explanation of the dynamics can be found in the article
+(in preparation) by C. Hawks et al. (2018).</p>
+
+<h3 align="left">Here are some movies to examplify the dynamics (Click
+on the image to open the corresponding animation)</h3>
+
+<table style="text-align: left; width: 979px; height: 488px;" border="1" cellpadding="2" cellspacing="2">
+
+  <tbody>
+    <tr align="center">
+      <td style="vertical-align: top;"><a href="anim_fs1p0.gif" target="_blank"><img style="border: 0px solid ; width: 914px; height: 380px;" alt="FS1" src="fig_STW_FS1.png"></a><br>
+      </td>
+    </tr>
+    <tr align="center">
+      <td style="vertical-align: top;"><a href="anim_fs1p44.gif" target="_blank"><img style="border: 0px solid ; width: 914px; height: 380px;" alt="FS1P44" src="fig_STW_FS1P44.png"></a><br>
+      </td>
+    </tr>
+    <tr align="center">
+      <td style="vertical-align: top;"><a href="anim_fs1p9.gif" target="_blank"><img style="border: 0px solid ; width: 914px; height: 380px;" alt="FS1P9" src="fig_STW_FS1P9.png"></a><br>
+      </td>
+    </tr>
+    <tr align="center">
+      <td style="vertical-align: top;"><a href="anim_fs3p5.gif" target="_blank"><img style="border: 0px solid ; width: 914px; height: 380px;" alt="FS3P5" src="fig_STW_FS3P5.png"></a><br>
+      </td>
+    </tr>
+    <tr align="center">
+      <td style="vertical-align: top;"><a href="anim_fs20.gif" target="_blank"><img style="border: 0px solid ; width: 914px; height: 380px;" alt="FS20" src="fig_STW_FS20.png"></a><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<br>
+
+<h2 align="left">References</h2>
+
+[1] Desplantez, T., Halliday, D., Dupont, E. &amp; Weingart, R. [2004]
+&#8220;Cardiac connexins cx43 and cx45: formation of diverse gap junction
+channels with diverse electrical properties,&#8221; Pflugers Arch. 448(4),
+363&#8211;375.<br>
+
+<br>
+
+<br>
+
+</body></html>
