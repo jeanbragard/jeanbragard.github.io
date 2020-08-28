@@ -1,0 +1,902 @@
+<!DOCTYPE doctype PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html><head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="GENERATOR" content="Mozilla/4.7 [en-gb] (Win95; I) [Netscape]">
+  <meta name="Author" content="A. Garcimartín">
+  <meta name="language" content="es">
+  <meta name="KeyWords" content="INTRODUCCION INTRODUCCIÓN MATLAB introducción introduccion Matlab matlab"><title>Introducción a Matlab</title></head><body alink="#ff0000" bgcolor="#ede7c7" link="#0000ee" text="#000000" vlink="#551a8b">
+<center><img src="matlab0_files/escudorrojo.gif" lowsrc="escudo2.gif" alt="escudo" align="left" height="150" width="120"> <b><i><font color="#c0165f"><font size="+3">Introducción a Matlab</font></font></i></b> <br>
+<hr width="100%"> <br>
+<b><i><font color="#800000">por<font size="+1"> <a target="_blank" href="https://sites.google.com/unav.es/angelgarcimartin/">Ángel Garcimartín</a></font></font></i></b>
+<br>
+<font color="#0000ee"><font size="+1"><a target="_blank" href="https://www.unav.edu/web/departamento-de-fisica-y-matematica-aplicada">Departamento de Física y
+Matemática Aplicada</a></font></font>
+<hr width="100%"> <br>
+<b><i><font color="#993300">Véase también:</font><font color="#c0165f"><a target="_blank" href="matlab1.html">Introducción
+a la programación con Matlab</a></font></i></b></center>
+<dt>
+  <hr size="6" width="100%"></dt>
+<dd> <font size="+1">M</font>atlab es un programa interactivo para
+cálculo numérico y tratamiento de datos. Contiene muchas
+herramientas y
+utilidades que permiten además diversas funcionalidades, como la
+presentación gráfica en 2 y 3 dimensiones. Esos
+útiles
+están agrupados en "paquetes" (<i>toolboxes</i>). A Matlab se le
+pueden añadir paquetes especializados para algunas tareas (por
+ejemplo,
+para tratamiento de imágenes). Trabajar con Matlab comporta
+aprender
+un lenguaje simple. En esta introducción se explican los
+elementos
+básicos de este lenguaje.</dd>
+<dd> Matlab es un programa <i>command-driven</i>, es decir, que se
+introducen las órdenes escribiéndolas una a una a
+continuación del símbolo <tt><font size="+1">»</font></tt>
+(<i>prompt</i>) que aparece en una interfaz de usuario (una ventana).
+Esta introducción contiene ejemplos que se pueden escribir
+directamente en la línea de comandos de Matlab. Para distinguir
+esos comandos, junto con la respuesta del programa, se emplean un tipo
+de letra diferente:</dd>
+<dd> <tt><font size="+1">»2+2</font></tt></dd>
+<dd> <tt><font size="+1">ans =</font></tt></dd>
+<ul>
+  <dd> <tt><font size="+1">4</font></tt></dd>
+</ul>
+Una manera de seguir esta introducción consiste en abrir Matlab
+en otra ventana, e ir copiando y pegando el comando a
+continuación del símbolo &gt;&gt;. <dd> Para más
+información, se
+puede consultar el folleto <i>"Getting Started with Matlab"</i> o el
+manual
+de usuario (que están en la biblioteca). También puede
+consultarse la ayuda en línea, como se explica más
+adelante. O conectarse al servidor Web de <a href="http://www.mathworks.com/">Mathworks</a>, la empresa que
+comercializa Matlab, donde pueden encontrarse -por ejemplo- programas
+que han escrito otros usuarios de Matlab.</dd>
+<dd> Este documento contiene los siguientes apartados:</dd>
+<ul>
+  <ul>
+    <ul>
+      <font size="+1"><a href="#combas">Comandos básicos</a></font>
+      <br>
+      <font size="+1"><a href="#ayuda">Ayuda en línea</a></font>
+      <br>
+      <font size="+1"><a href="#entorno">El entorno Matlab</a></font> <br>
+      <font size="+1"><a href="#vectmat">Vectores y matrices</a></font>
+      <br>
+      <font size="+1"><a href="#poli">Polinomios</a></font> <br>
+      <font size="+1"><a href="#grafico">Gráficos</a></font> <br>
+      <font size="+1"><a href="#scripts">"Scripts"<br>
+      </a><font size="+1"><a href="#simbolic">Cálculo
+simbólico<br>
+      </a><font size="+1"><a href="#suger">Sugerencias <br>
+      </a></font> </font> </font>
+      <ul>
+        <font size="+1"> </font>
+      </ul>
+    </ul>
+    <font size="+1"> </font>
+  </ul>
+  <font size="+1"> </font>
+</ul>
+<font size="+1"> </font>
+<hr width="100%"><font size="+1"> <br>
+<b><i><font color="#990000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Para saber más: una página Web de <a target="_blank" href="matlab1.html">introducción
+a la programación</a> con Matlab.</font></i></b> <br>
+</font>
+<hr width="100%"><font size="+1"> <br>
+<a name="combas"></a> </font>
+<h2><font size="+1"> <b><font color="#c0165f">Comandos básicos</font></b></font></h2>
+<font size="+1"> </font>
+<ul>
+  <font size="+1"> </font>
+  <ul>
+    <font size="+1"> <i><font color="#800000">En esta sección
+se explica cómo usar Matlab a modo de calculadora.</font></i> </font>
+  </ul>
+  <font size="+1"> </font>
+</ul>
+<font size="+1"> <b>E</b>mpecemos con algo sencillo: las operaciones
+matemáticas elementales. </font>
+<p><font size="+1"><tt><font size="+1">» x=2+3</font></tt> </font></p>
+<p><font size="+1"><tt><font size="+1">x =</font></tt> </font></p>
+<ul>
+  <font size="+1"> <tt><font size="+1">5</font></tt> </font>
+</ul>
+<font size="+1"> Si no se asigna el resultado a ninguna variable,
+Matlab lo asigna por defecto a la variable <tt>ans</tt> (<i>answer</i>):
+</font>
+<p><font size="+1"><tt><font size="+1">» 2+3</font></tt> </font></p>
+<p><font size="+1"><tt><font size="+1">ans =</font></tt> </font></p>
+<ul>
+  <font size="+1"> <tt><font size="+1">5</font></tt> </font>
+</ul>
+<font size="+1"> Para saber cuál es el valor asignado a una
+determinada variable, basta introducir el nombre de la variable: </font>
+<p><font size="+1"><tt><font size="+1">» x</font></tt> </font></p>
+<p><font size="+1"><tt><font size="+1">x =</font></tt> </font></p>
+<ul>
+  <font size="+1"> <tt><font size="+1">5</font></tt> </font>
+</ul>
+<font size="+1"> La notación para las <b>operaciones
+matemáticas elementales</b> es la siguiente: <br>
+&nbsp; </font>
+<center>
+<table bgcolor="#ff8080" border="2">
+  <tbody>
+    <tr>
+      <td align="center" valign="CENTER"><font size="+1">^</font></td>
+      <td align="center" valign="CENTER"><font size="+1">exponenciación</font></td>
+    </tr>
+    <tr>
+      <td><font size="+1">*</font></td>
+      <td align="center" valign="CENTER"><font size="+1">multiplicación</font></td>
+    </tr>
+    <tr align="center" valign="CENTER">
+      <td><font size="+1">/</font></td>
+      <td align="center" valign="CENTER"><font size="+1">división</font></td>
+    </tr>
+    <tr align="center" valign="CENTER">
+      <td><font size="+1">+</font></td>
+      <td><font size="+1">suma</font></td>
+    </tr>
+    <tr align="center" valign="CENTER">
+      <td><font size="+1">-</font></td>
+      <td><font size="+1">resta</font></td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<font size="+1"> </font>
+<p><font size="+1">El orden en que se realizan las operaciones de una
+línea es el siguiente: primero, la exponenciación; luego,
+las multiplicaciones y divisiones; y finalmente, las sumas y las
+restas. Si se quiere forzar
+un determinado orden, se deben utilizar paréntesis, que se
+evalúan siempre al principio. Por ejemplo, para hallar dos entre
+tres, </font></p>
+<p><font size="+1"><tt><font size="+1">» 2/2+1</font></tt> </font></p>
+<p><font size="+1"><tt><font size="+1">ans =</font></tt> </font></p>
+<ul>
+  <font size="+1"> <tt><font size="+1">2</font></tt> </font>
+</ul>
+<font size="+1"> (en efecto: primero se calcula 2/2 y luego se suma 1).
+</font>
+<p><font size="+1"><tt><font size="+1">» 2/(2+1)</font></tt> </font></p>
+<p><font size="+1"><tt><font size="+1">ans =</font></tt> </font></p>
+<ul>
+  <font size="+1"> <tt><font size="+1">0.6667</font></tt> </font>
+</ul>
+<font size="+1"> Primero se calcula el paréntesis (2+1) y luego
+se realiza la división. </font>
+<p><font size="+1">Dos observaciones. El punto decimal es . (no una
+coma). Y en Matlab, las mayúsculas y las minúsculas son
+distintas. Es decir, X es una variable diferente de x. </font></p>
+<p><font size="+1">En Matlab están también definidas
+algunas funciones elementales. Las funciones, en Matlab, se escriben
+introduciendo el argumento entre paréntesis a
+continuación del nombre de
+la función, sin dejar espacios. Por ejemplo: </font></p>
+<p><font size="+1"><tt><font size="+1">» y=exp(0)</font></tt> </font></p>
+<p><font size="+1"><tt><font size="+1">y =</font></tt> </font></p>
+<ul>
+  <font size="+1"> <tt><font size="+1">1</font></tt> </font>
+</ul>
+<font size="+1"> (la función exp es la exponencial). He
+aquí una tabla con algunas <b>funciones elementales</b>: <br>
+&nbsp; </font>
+<center>
+<table bgcolor="#ff8080" border="2">
+  <tbody>
+    <tr>
+      <td>
+      <center><tt><font size="+1">sin</font></tt></center>
+      </td>
+      <td>
+      <center><font size="+1">seno</font></center>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <center><tt><font size="+1">cos</font></tt></center>
+      </td>
+      <td>
+      <center><font size="+1">coseno</font></center>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <center><tt><font size="+1">tan</font></tt></center>
+      </td>
+      <td>
+      <center><font size="+1">tangente</font></center>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <center><tt><font size="+1">sec</font></tt></center>
+      </td>
+      <td>
+      <center><font size="+1">secante</font></center>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <center><tt><font size="+1">csc</font></tt></center>
+      </td>
+      <td>
+      <center><font size="+1">cosecante</font></center>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <center><tt><font size="+1">cot</font></tt></center>
+      </td>
+      <td>
+      <center><font size="+1">cotangente</font></center>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <center><tt><font size="+1">exp</font></tt></center>
+      </td>
+      <td>
+      <center><font size="+1">exponencial</font></center>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <center><tt><font size="+1">log</font></tt></center>
+      </td>
+      <td>
+      <center><font size="+1">logaritmo natural</font></center>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <center><tt><font size="+1">sqrt</font></tt></center>
+      </td>
+      <td>
+      <center><font size="+1">raíz cuadrada</font></center>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <center><tt><font size="+1">abs</font></tt></center>
+      </td>
+      <td>
+      <center><font size="+1">valor absoluto</font></center>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<font size="+1"> </font>
+<p><font size="+1">Para obtener las funciones trigonométricas
+inversas, basta añadir una a delante del nombre. Y para las
+funciones hiperbólicas, una h al final. Por ejemplo, atanh(x) es
+el arcotangente hiperbólico de x: </font></p>
+<p><font size="+1"><tt><font size="+1">» z=atanh(2)</font></tt> </font></p>
+<p><font size="+1"><tt><font size="+1">z =</font></tt> </font></p>
+<ul>
+  <font size="+1"> <tt><font size="+1">0.5493 + 1.5708i</font></tt> </font>
+</ul>
+<font size="+1"> (z es un número complejo). </font>
+<p><font size="+1"><a name="ayuda"></a> </font></p>
+<h2><font size="+1"> <b><font color="#c0165f"><font size="+2">Ayuda en
+línea</font></font></b></font></h2>
+<font size="+1"> </font>
+<center><font size="+1"><i><font color="#800000">Cómo obtener
+información sobre los comandos de Matlab.</font></i></font></center>
+<font size="+1"> </font>
+<p><font size="+1"><b>E</b>ste documento es tan sólo una
+introducción -muy resumida- del lenguaje y del manejo de Matlab.
+Antes de seguir, es
+conveniente indicar cómo puede obtenerse más
+información
+sobre cualquier detalle referente a Matlab. Por supuesto, siempre se
+pueden
+consultar los manuales: hay un ejemplar en las salas del C.T.I. y otro
+en
+la biblioteca, que puede obtenerse en préstamo por un
+día.
+</font></p>
+<p><font size="+1">Además, <i>desde dentro de Matlab</i> pueden
+obtenerse explicaciones sobre un tema particular. Hay varios
+métodos. </font></p>
+<ul>
+  <font size="+1"> <li> <b>El comando <tt><font size="+1">help</font></tt></b>.
+Para obtener información sobre una determinada función,
+basta teclear desde la línea de comandos <tt><font size="+1">help</font></tt>
+seguido del nombre de la función. Por ejemplo:</li>
+  </font>
+  <p><font size="+1"> </font></p>
+  <font size="+1"> </font>
+  <p><font size="+1"><tt><font size="+1">» help round</font></tt>
+  </font></p>
+  <font size="+1"> </font>
+  <p><font size="+1"><tt><font size="+1">ROUND Round towards nearest
+integer.</font></tt> </font></p>
+  <font size="+1"> </font>
+  <p><font size="+1"><tt><font size="+1">ROUND(X) rounds the elements
+of
+X to the nearest integers.</font></tt> </font></p>
+  <font size="+1"> </font>
+  <p><font size="+1"><tt><font size="+1">See also FLOOR, CEIL, FIX.</font></tt>
+  </font></p>
+  <font size="+1"> </font>
+  <p><font size="+1">Si se escribe sólo <tt><font size="+1">help</font></tt>,
+se obtiene un índice de temas. También puede obtenerse
+información sobre uno de los temas de esa lista: así, <tt><font size="+1">help elfun</font></tt> proporciona información sobre
+las funciones matemáticas elementales. </font></p>
+  <font size="+1"> <li> <b>La ventana de ayuda</b>. Puede llamarse
+tecleando <tt><font size="+1">helpwin</font></tt> o bien escogiendo
+del menú Help el ítem Help Window. Se obtiene una ventana
+nueva, y haciendo doble click con el ratón sobre un
+capítulo se pasa a un elenco de los ítems contenidos, que
+a su vez pueden escogerse para una explicación más
+detallada. Con los botones Back y Forward se navega hacia atrás
+o hacia adelante. También puede escribirse directamente en la
+zona superior izquierda el nombre del comando deseado: por ejemplo,
+para buscar información sobre <tt><font size="+1">sqrt</font></tt>
+...</li>
+  </font>
+</ul>
+<font size="+1"> </font>
+<center><font size="+1"><img src="matlab0_files/helpw.jpg" height="222" width="451"> </font></center>
+<font size="+1"> </font>
+<ul>
+  <font size="+1">En la barra <i>See also</i> aparecen comandos
+relacionados. La información es la misma que la obtenida con el
+comando <tt><font size="+1">help</font></tt>, pero con la comodidad de
+presentarse en una ventana aparte en vez de en la línea de
+comandos. <li> <b>La ayuda interactiva</b>. Se obtiene escogiendo del
+menú Help el ítem Help Desk, o tecleando<tt> <font size="+1">helpdesk</font></tt> en la barra de comandos. Se lanza el
+navegador y se obtiene un documento de inicio con un índice de
+temas en hipertexto donde están los manuales
+y otras utilidades, como un buscador. Para leer el manual, se necesita
+el
+programa Acrobat Reader.</li>
+  </font>
+  <p><font size="+1"> </font></p>
+  <font size="+1"> </font>
+  <p><font size="+1">La información que se obtiene es mucho
+más completa que en los otros dos casos, lo cual puede resultar
+inconveniente si uno desea simplemente, por poner un caso, conocer la
+sintaxis de una
+función. </font></p>
+  <font size="+1"> </font>
+  <p><font size="+1">Una introducción a Matlab más
+rigurosa, extensa y comprensiva que este documento puede encontrarse en
+el epígrafe <i>"Getting Started"</i> del Help Desk.</font></p>
+</ul>
+<font size="+1"> <a name="entorno"></a> </font>
+<h2><font size="+1"> <b><font color="#c0165f"><font size="+2">El
+entorno
+Matlab</font></font></b></font></h2>
+<font size="+1"> </font>
+<center><font size="+1"><i><font color="#800000">Para desenvolverse en
+la interfaz de usuario, llevar la cuenta de las variables, ...</font></i></font></center>
+<font size="+1"> </font>
+<ul>
+  <font size="+1"> <li> <b>Edición de la línea de
+comandos.</b> Con las flechas del teclado se pueden recuperar las
+órdenes anteriores, sin tener que volver a teclearlas.
+Así, en el caso de una equivocación en un comando
+complicado</li>
+  </font> <font size="+1"> </font>
+  <p><font size="+1"><tt><font size="+1">»
+d2_f=(y2-2*y1+y3)/deltax^2)</font></tt> </font></p>
+  <font size="+1"> </font>
+  <p><font size="+1"><tt><font size="+1">??? -2*y1+y3)/deltax^2)</font></tt>
+  </font></p>
+  <font size="+1"> </font>
+  <ul>
+    <font size="+1"> </font>
+    <ul>
+      <font size="+1"> </font>
+      <ul>
+        <font size="+1"> </font>
+        <ul>
+          <font size="+1"> </font>
+          <ul>
+            <font size="+1"> <tt><font size="+1">|</font></tt> </font>
+          </ul>
+          <font size="+1"> </font>
+        </ul>
+        <font size="+1"> </font>
+      </ul>
+      <font size="+1"> </font>
+    </ul>
+    <font size="+1"> </font>
+  </ul>
+  <font size="+1"> <tt><font size="+1">Missing operator, comma, or
+semi-colon.</font></tt> </font>
+  <p><font size="+1">en vez de volver a teclear todo, puede recuperarse
+la instrucción pulsando la tecla "flecha hacia arriba",
+desplazarse
+hasta el error (falta un paréntesis) con la flecha hacia a la
+izquierda, y arreglarlo: <br>
+  <tt><font size="+1">» d2_f=(y2-2*y1+y3)/(deltax^2)</font></tt> </font></p>
+  <font size="+1"> <li> En ocasiones, es interesante <b>no presentar
+el resultado en la pantalla</b> (por ejemplo, cuando se trata de una
+lista de
+datos muy larga). Eso se consigue poniendo un punto y coma al final de
+la
+instrucción.</li>
+  </font>
+  <p><font size="+1"> </font></p>
+  <font size="+1"> </font>
+  <p><font size="+1"><tt><font size="+1">» y=sqrt(4);</font></tt>
+  </font></p>
+  <font size="+1"> </font>
+  <p><font size="+1">El resultado no aparece, pero sin embargo el
+cálculo se ha realizado: </font></p>
+  <font size="+1"> </font>
+  <p><font size="+1"><tt><font size="+1">» y</font></tt> </font></p>
+  <font size="+1"> </font>
+  <p><font size="+1"><tt><font size="+1">y =</font></tt> </font></p>
+  <font size="+1"> </font>
+  <ul>
+    <font size="+1"> <tt><font size="+1">2</font></tt> </font>
+  </ul>
+  <font size="+1"> <li> El comando <tt><font size="+1">who</font></tt>
+indica las <b>variables</b> con las que se está trabajando:</li>
+  </font> <font size="+1"> </font>
+  <p><font size="+1"><tt><font size="+1">» who</font></tt> </font></p>
+  <font size="+1"> </font>
+  <p><font size="+1"><tt><font size="+1">Your variables are:</font></tt>
+  </font></p>
+  <font size="+1"> </font>
+  <p><font size="+1"><tt><font size="+1">Fy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+f&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; indice&nbsp;&nbsp;&nbsp;&nbsp;
+n_punt&nbsp;&nbsp;&nbsp;&nbsp; t_m</font></tt> </font></p>
+  <font size="+1"> </font>
+  <p><font size="+1"><tt><font size="+1">delta_f f_max&nbsp;&nbsp;
+manchas&nbsp;&nbsp;&nbsp;
+t&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; y</font></tt> </font></p>
+  <font size="+1"> <li> Comandos relacionados con el <b>sistema
+operativo</b>:</li>
+  </font>
+</ul>
+<font size="+1"> </font>
+<center>
+<table bgcolor="#ff8080" border="2">
+  <tbody>
+    <tr>
+      <td>
+      <center><tt><font size="+1">pwd</font></tt></center>
+      </td>
+      <td>
+      <center><i><font size="+1">Present working directory</font></i>
+      <p><font size="+1">(directorio de trabajo actual)</font></p>
+      </center>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <center><tt><font size="+1">cd&nbsp;</font></tt></center>
+      </td>
+      <td>
+      <center><font size="+1">cambiar de directorio</font></center>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <center><tt><font size="+1">dir</font></tt></center>
+      </td>
+      <td>
+      <center><font size="+1">listado de los ficheros del directorio
+actual</font></center>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<font size="+1"> </font>
+<ul>
+  <font size="+1">Estos comandos son muy similares a los
+análogos de MS-DOS o UNIX. <li> <b>Guardar y cargar ficheros
+de datos</b>. Se emplean los comandos <tt><font size="+1">save</font></tt>
+y <tt><font size="+1">load</font></tt>, respectivamente.</li>
+  </font>
+  <ul>
+    <font size="+1"> <li> para guardar datos: <tt><font size="+1">save
+[nombre del fichero] [variable] -ascii</font></tt></li>
+    <li> para recuperar datos: <tt><font size="+1">load [nombre del
+fichero] [variable] -ascii</font></tt></li>
+    </font>
+  </ul>
+  <font size="+1"> Por ejemplo: con estas dos órdenes </font>
+  <p><font size="+1"><tt><font size="+1">» cd a:</font></tt> </font></p>
+  <font size="+1"> </font>
+  <p><font size="+1"><tt><font size="+1">» save toto.dat y -ascii</font></tt>
+  </font></p>
+  <font size="+1"> </font>
+  <p><font size="+1">se cambia el directorio de trabajo a a:\ y se
+guarda allí el contenido de la variable <tt><font size="+1">y</font></tt>
+en el fichero <tt><font size="+1">toto.dat</font></tt> con formato
+texto
+(por eso se pone <tt><font size="+1">-ascii</font></tt>).</font></p>
+</ul>
+<font size="+1"> <a name="vectmat"></a> </font>
+<h2><font size="+1"> <b><font color="#c0165f"><font size="+2">Vectores
+y
+matrices</font></font></b></font></h2>
+<font size="+1"> </font>
+<center><font size="+1"><i><font color="#800000">La "especialidad" de
+Matlab es el manejo de matrices: Matlab son las siglas de Matrix
+Laboratory.</font></i></font></center>
+<font size="+1"> </font>
+<p><font size="+1"><b>U</b>n vector se define introduciendo los
+componentes, separados por espacios o por comas, entre corchetes: </font></p>
+<p><font size="+1"><tt><font size="+1">» v=[sqrt(3) 0 -2]</font></tt>
+</font></p>
+<p><font size="+1"><tt><font size="+1">v =</font></tt> </font></p>
+<ul>
+  <font size="+1"> <tt><font size="+1">1.7321&nbsp;&nbsp;
+0&nbsp;&nbsp; -2.0000</font></tt> </font>
+</ul>
+<font size="+1"> Para definir un vector columna, se separan las filas
+por puntos y comas: </font>
+<p><font size="+1"><tt><font size="+1">» w=[1;0;1/3]</font></tt> </font></p>
+<p><font size="+1"><tt><font size="+1">w =</font></tt> </font></p>
+<ul>
+  <font size="+1"> <tt><font size="+1">1.0000</font></tt> </font>
+  <p><font size="+1"><tt><font size="+1">0</font></tt> </font></p>
+  <font size="+1"> </font>
+  <p><font size="+1"><tt><font size="+1">0.3333</font></tt></font></p>
+</ul>
+<font size="+1"> La operación transponer (cambiar filas por
+columnas) se designa por el apóstrofe: </font>
+<p><font size="+1"><tt><font size="+1">» w'</font></tt> </font></p>
+<p><font size="+1"><tt><font size="+1">ans =</font></tt> </font></p>
+<ul>
+  <font size="+1"> <tt><font size="+1">1.0000&nbsp;&nbsp;
+0&nbsp;&nbsp; 0.3333</font></tt> </font>
+</ul>
+<font size="+1"> Las operaciones matemáticas elementales pueden
+aplicarse a los vectores: </font>
+<p><font size="+1"><tt><font size="+1">» v*w</font></tt> </font></p>
+<p><font size="+1"><tt><font size="+1">ans =</font></tt> </font></p>
+<ul>
+  <font size="+1"> <tt><font size="+1">1.0654</font></tt> </font>
+</ul>
+<font size="+1"> <tt><font size="+1">» v+w'</font></tt> </font>
+<p><font size="+1"><tt><font size="+1">ans =</font></tt> </font></p>
+<ul>
+  <font size="+1"> <tt><font size="+1">2.7321&nbsp;&nbsp;
+0&nbsp;&nbsp; -1.6667</font></tt> </font>
+</ul>
+<font size="+1"> Para crear un vector de componentes equiespaciados se
+emplean los dos puntos: </font>
+<p><font size="+1"><tt><font size="+1">» x=4:2:10</font></tt> </font></p>
+<p><font size="+1"><tt><font size="+1">x =</font></tt> </font></p>
+<ul>
+  <font size="+1"> <tt><font size="+1">4 6 8 10</font></tt> </font>
+</ul>
+<font size="+1"> (los componentes de <tt><font size="+1">x</font></tt>
+van desde 4 de 2 en 2 hasta 10). </font>
+<p><font size="+1">Para introducir matrices, se separa cada fila con un
+punto y coma: </font></p>
+<p><font size="+1"><tt><font size="+1">» M = [1 2 3 ;4 5 6 ;7 8 9]</font></tt>
+</font></p>
+<p><font size="+1"><tt><font size="+1">M =</font></tt> </font></p>
+<ul>
+  <font size="+1"> <tt><font size="+1">1 2 3</font></tt> </font>
+  <p><font size="+1"><tt><font size="+1">4 5 6</font></tt> </font></p>
+  <font size="+1"> </font>
+  <p><font size="+1"><tt><font size="+1">7 8 9</font></tt></font></p>
+</ul>
+<font size="+1"> Para referirse a un elemento de la matriz se hace
+así: </font>
+<p><font size="+1"><tt><font size="+1">» M(3,1)</font></tt> </font></p>
+<p><font size="+1"><tt><font size="+1">ans =</font></tt> </font></p>
+<ul>
+  <font size="+1"> <tt><font size="+1">7</font></tt> </font>
+</ul>
+<font size="+1"> Para referirse a toda una fila o a toda una columna se
+emplean los dos puntos: </font>
+<p><font size="+1"><tt><font size="+1">» v1=M(:,2)</font></tt> </font></p>
+<p><font size="+1"><tt><font size="+1">v1 =</font></tt> </font></p>
+<ul>
+  <font size="+1"> <tt><font size="+1">2</font></tt> </font>
+  <p><font size="+1"><tt><font size="+1">5</font></tt> </font></p>
+  <font size="+1"> </font>
+  <p><font size="+1"><tt><font size="+1">8</font></tt></font></p>
+</ul>
+<font size="+1"> (v1 es la segunda columna de M). </font>
+<p><font size="+1">Con las matrices también funcionan las
+operaciones matemáticas elementales. Así </font></p>
+<p><font size="+1"><tt><font size="+1">» M^2</font></tt> </font></p>
+<p><font size="+1"><tt><font size="+1">ans =</font></tt> </font></p>
+<ul>
+  <font size="+1"> <tt><font size="+1">30&nbsp; 36&nbsp; 42</font></tt>
+  </font>
+  <p><font size="+1"><tt><font size="+1">66&nbsp; 81&nbsp; 96</font></tt>
+  </font></p>
+  <font size="+1"> </font>
+  <p><font size="+1"><tt><font size="+1">102 126 150</font></tt></font></p>
+</ul>
+<font size="+1"> Si se quiere operar en los elementos de la matriz, uno
+por uno, se pone un punto antes del operador. Si se quiere elevar al
+cuadrado <i>cada uno de los elementos de M</i>, entonces </font>
+<p><font size="+1"><tt><font size="+1">» M.^2</font></tt> </font></p>
+<p><font size="+1"><tt><font size="+1">ans =</font></tt> </font></p>
+<ul>
+  <font size="+1"> <tt><font size="+1">1&nbsp; 4&nbsp; 9</font></tt> </font>
+  <p><font size="+1"><tt><font size="+1">16 25 36</font></tt> </font></p>
+  <font size="+1"> </font>
+  <p><font size="+1"><tt><font size="+1">49 64 81</font></tt></font></p>
+</ul>
+<font size="+1"> Algunas <b>funciones</b> definidas sobre matrices: <br>
+&nbsp; </font>
+<center>
+<table bgcolor="#ff8080" border="2">
+  <tbody>
+    <tr>
+      <td>
+      <center><tt><font size="+1">det</font></tt></center>
+      </td>
+      <td>
+      <center><font size="+1">determinante</font></center>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <center><tt><font size="+1">inv</font></tt></center>
+      </td>
+      <td>
+      <center><font size="+1">matriz inversa</font></center>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <center><tt><font size="+1">poly</font></tt></center>
+      </td>
+      <td>
+      <center><font size="+1">polinomio característico</font></center>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <center><tt><font size="+1">'</font></tt></center>
+      </td>
+      <td>
+      <center><font size="+1">transpuesta</font></center>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<font size="+1"> </font>
+<p><font size="+1">(Para más información: <tt><font size="+1">help elmat</font></tt>) </font></p>
+<p><font size="+1"><a name="poli"></a> </font></p>
+<h2><font size="+1"> <font color="#c0165f">Poliniomios</font></font></h2>
+<font size="+1"> </font>
+<center><font size="+1"><i><font color="#800000">En Matlab los
+polinomios se representan por vectores cuyas componentes son los
+coeficientes del polinomio.</font></i></font></center>
+<font size="+1"> </font>
+<p><font size="+1"><b>S</b>ea <br>
+<img src="matlab0_files/poli.gif" height="28" width="138"> </font></p>
+<p><font size="+1">Este polinomio se representa por un vector p </font></p>
+<p><font size="+1"><tt><font size="+1">» p=[1 -3 +2]</font></tt> </font></p>
+<p><font size="+1"><tt><font size="+1">p =</font></tt> </font></p>
+<ul>
+  <font size="+1"> <tt><font size="+1">1&nbsp;&nbsp; -3&nbsp;&nbsp; 2</font></tt>
+  </font>
+</ul>
+<font size="+1"> Para hallar las raíces del polinomio, se hace </font>
+<p><font size="+1"><tt><font size="+1">» roots(p)</font></tt> </font></p>
+<p><font size="+1"><tt><font size="+1">ans =</font></tt> </font></p>
+<ul>
+  <font size="+1"> <tt><font size="+1">2</font></tt> </font>
+  <p><font size="+1"><tt><font size="+1">1</font></tt></font></p>
+</ul>
+<font size="+1"> y si se quiere hallar el valor de P(x) para un
+determinado valor de x (por ejemplo, para x=0) </font>
+<p><font size="+1"><tt><font size="+1">» polyval(p,0)</font></tt>
+</font></p>
+<p><font size="+1"><tt><font size="+1">ans =</font></tt> </font></p>
+<ul>
+  <font size="+1"> <tt><font size="+1">2</font></tt> </font>
+</ul>
+<font size="+1"> <a name="grafico"></a> </font>
+<h2><font size="+1"> <font color="#c0165f">Gráficos</font></font></h2>
+<font size="+1"> </font>
+<center><font size="+1"><i><font color="#800000">Cómo presentar
+datos con Matlab.</font></i></font></center>
+<font size="+1"> </font>
+<p><font size="+1"><b>L</b>as posibilidades de Matlab son muy grandes.
+Se indica a continuación cómo realizar gráficos
+sencillos. Para más información, o para conocer la
+versatilidad de Matlab: capítulo <i>Handle Graphics Object </i>del
+Help Desk, el manual
+<i>Using MATLAB Graphics</i> o la ayuda en línea <tt><font size="+1">help graph2d</font></tt>. </font></p>
+<p><font size="+1">Veamos cómo se puede representar la
+función seno entre 0 y 10. Para empezar creemos una variable x
+que vaya de cero
+a 10: </font></p>
+<p><font size="+1"><tt><font size="+1">» x=0:0.1:10;</font></tt> </font></p>
+<p><font size="+1">y a continuación, calculemos sin(x)
+almacenando el resultado en la variable y: </font></p>
+<p><font size="+1"><tt><font size="+1">» y=sin(x);</font></tt> </font></p>
+<p><font size="+1">Para trazar el gráfico, se emplea la
+función <tt><font size="+1">plot</font></tt>: </font></p>
+<p><font size="+1"><tt><font size="+1">» plot(x,y)</font></tt> </font></p>
+<p><font size="+1">y se obtiene en otra ventana el gráfico: </font></p>
+<center><font size="+1"> </font>
+<p><font size="+1"><img src="matlab0_files/plot.jpg" height="402" width="500"> </font></p>
+</center>
+<font size="+1"> </font>
+<p><font size="+1">Entre los muchos comandos que se pueden utilizar
+para
+modificar los gráficos, es muy útil el empleado para
+cambiar
+la escala de los ejes. La orden es </font></p>
+<p><font size="+1"><tt><font size="+1">axis([x1 x2 y1 y2])</font></tt> </font></p>
+<p><font size="+1">donde x1, x2 son los límites inferior y
+superior del eje x, e y1 e y2 los del eje y. </font></p>
+<p><font size="+1">Para representar unos datos con símbolos de
+colores, se añade al comando <tt><font size="+1">plot</font></tt>,
+entre
+apóstrofes, la especificación. Vamos a crear una variable
+con dos filas que contenga los números del 1 al 10 en la primera
+fila, y el doble de esos números en la segunda, y dibujarlos con
+puntos rojos: </font></p>
+<p><font size="+1"><tt><font size="+1">» x(1,:)=0:10;</font></tt>
+</font></p>
+<p><font size="+1"><tt><font size="+1">» x(2,:)=2*x(1,:);</font></tt>
+</font></p>
+<p><font size="+1"><tt><font size="+1">» x</font></tt> </font></p>
+<p><font size="+1"><tt><font size="+1">x =</font></tt> </font></p>
+<ul>
+  <font size="+1"> <tt><font size="+1">0&nbsp;&nbsp; 1&nbsp;&nbsp;
+2&nbsp;&nbsp; 3&nbsp;&nbsp; 4&nbsp;&nbsp; 5&nbsp;&nbsp; 6&nbsp;&nbsp;
+7&nbsp;&nbsp; 8&nbsp;&nbsp; 9&nbsp;&nbsp; 10</font></tt> </font>
+  <p><font size="+1"><tt><font size="+1">0&nbsp;&nbsp; 2&nbsp;&nbsp;
+4&nbsp;&nbsp; 6&nbsp;&nbsp; 8&nbsp;&nbsp; 10&nbsp; 12&nbsp; 14&nbsp;
+16&nbsp; 18&nbsp; 20</font></tt></font></p>
+</ul>
+<font size="+1"> <tt><font size="+1">» plot(x(1,:),x(2,:),'ro')</font></tt>
+</font>
+<center><font size="+1"> </font>
+<p><font size="+1"><img src="matlab0_files/plot2.jpg" height="347" width="437"> </font></p>
+</center>
+<font size="+1"> </font>
+<p><font size="+1">(para ver las especificaciones posibles, teclear <tt><font size="+1">help plot</font></tt>. Por ejemplo, <tt><font size="+1">'ro'</font></tt>
+establece un gráfico de color rojo: r y de puntos: o.) Si no se
+indica nada, el gráfico se traza con una línea azul. </font></p>
+<p><font size="+1">Otras funciones muy útiles: <tt><font size="+1">grid</font></tt>, que traza una cuadrícula, <tt><font size="+1">xlabel('títulox')</font></tt>e<tt><font size="+1">
+ylabel('títuloy')</font></tt>, que sirven para poner un
+título en los ejes. </font></p>
+<p><font size="+1">Para imprimir una figura, basta seleccionar print <i>del
+menú de la figura.</i> </font></p>
+<p><font size="+1"><a name="scripts"></a> </font></p>
+<h2><font size="+1"> <font color="#c0165f">"Scripts"</font></font></h2>
+<font size="+1"> </font>
+<center><font size="+1"><i><font color="#800000">Archivos de
+órdenes: programar en Matlab.</font></i></font></center>
+<font size="+1"> </font>
+<p><font size="+1"><b>R</b>ealizar un programa en Matlab es
+fácil. Basta abrir un editor de texto (como el Bloc de Notas de
+Windows) y escribir los comandos uno a continuación de otro.
+Luego ese fichero de texto debe guardarse con la extensión .m, y
+a eso se le llama un <i>script</i>: </font></p>
+<center><font size="+1"> </font>
+<p><font size="+1"><img src="matlab0_files/scri.jpg" height="293" width="578"> </font></p>
+</center>
+<font size="+1"> </font>
+<p><font size="+1">Una vez guardado el fichero (en el ejemplo, ndata.m)
+en el directorio actual, desde la línea de comandos de Matlab
+basta
+escribir ndata para que se ejecute el programa. </font></p>
+<p><font size="+1">A partir de aquí, se abren las posibilidades
+de la programación con un lenguaje sencillo. Puede verse una
+página Web de introducción a la programación <a href="http://fisica.unav.es/personas/jbragard/matlab1.html">aquí</a>.
+</font></p>
+<p><font size="+1"><a name="simbolic"></a> </font></p>
+<h2><font size="+1"> <font color="#c0165f">Cálculo
+simbólico</font></font></h2>
+<font size="+1"> </font>
+<center><font size="+1"><i><font color="#800000">Matemáticas en
+el ordenador.</font></i></font></center>
+<font size="+1"> </font>
+<p><font size="+1"><b>H</b>asta ahora, las operaciones que se han
+mostrado se han realizado con números. El <i>toolbox </i>de
+cálculo simbólico permite realizar<b> cálculos
+abstractos</b>: </font></p>
+<p><font size="+1"><tt><font size="+1">» diff('sin(x)')</font></tt>
+</font></p>
+<p><font size="+1"><tt><font size="+1">ans =</font></tt> </font></p>
+<ul>
+  <font size="+1"> <tt><font size="+1">cos(x)</font></tt> </font>
+</ul>
+<font size="+1"> Las expresiones simbólicas se introducen entre
+apóstrofes. </font>
+<p><font size="+1">A continuación se da una tabla con algunas
+funciones de este toolbox, junto con un ejemplo de cada una: <br>
+&nbsp; </font></p>
+<center>
+<table bgcolor="#ff8080" border="2">
+  <tbody>
+    <tr>
+      <td>
+      <center><tt><font size="+1">diff</font></tt></center>
+      </td>
+      <td>
+      <center><b>derivada</b></center>
+      </td>
+      <td>
+      <center><tt><font size="+1">diff('sin(x)')</font></tt></center>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <center><tt><font size="+1">int</font></tt></center>
+      </td>
+      <td>
+      <center><b>integral</b></center>
+      </td>
+      <td>
+      <center><tt><font size="+1">int('x^2')</font></tt></center>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <center><tt><font size="+1">solve</font></tt></center>
+      </td>
+      <td>
+      <center><b>resolución de ecuaciones</b></center>
+      </td>
+      <td>
+      <center><tt><font size="+1">solve('x^2-3*x+2=0')</font></tt></center>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <center><tt><font size="+1">ezplot</font></tt></center>
+      </td>
+      <td>
+      <center><b>gráficos</b></center>
+      </td>
+      <td>
+      <center><tt><font size="+1">ezplot('exp(x)')</font></tt></center>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<font size="+1"> </font>
+<p><font size="+1">Evidentemente, las expresiones pueden ser todo lo
+complicadas que se quiera ... </font></p>
+<p><font size="+1"><tt><font size="+1">» solve('x=cos(x)')</font></tt>
+</font></p>
+<p><font size="+1"><tt><font size="+1">ans =</font></tt> </font></p>
+<ul>
+  <font size="+1"> <tt><font size="+1">.73908513321516064165531208767387</font></tt>
+  </font>
+</ul>
+<font size="+1"> <tt><font size="+1">»
+int('(x^4+4*x^3+11*x^2+12*x+8)/((x^2+2*x+3)^2*(x+1))')</font></tt> </font>
+<p><font size="+1"><tt><font size="+1">ans =</font></tt> </font></p>
+<ul>
+  <font size="+1"> <tt><font size="+1">log(x+1)+1/8*(-4*x-8)/(x^2+2*x+3)-1/4*2^(1/2)*atan(1/4*(2*x+2)*2^(1/2))</font></tt>
+  </font>
+</ul>
+<font size="+1"> </font>
+<hr width="100%"><font size="+1"> </font>
+<p><font size="+1"><a name="suger"></a> </font></p>
+<p><font size="+1"><font color="#800000">Se agradece cualquier
+sugerencia sobre este documento. Puede enviarse un mensaje por correo
+electrónico a&nbsp;</font><i><font color="#ff00ff"><a href="mailto:jbragard@unav.es"></a></font></i><img src="matlab0_files/elm_JB.png" title="" alt="elm" style="width: 200px; height: 24px;" align="middle">
+<br>
+</font></p>
+<hr width="100%"><font size="+1"> <br>
+</font> <br>
+
+</body></html>
