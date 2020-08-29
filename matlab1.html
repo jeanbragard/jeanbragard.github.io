@@ -1,65 +1,43 @@
 <!DOCTYPE doctype PUBLIC "-//w3c//dtd html 4.0 transitional//en">
 <html lang="es-es"><head>
-
-
-
-
-
-  
   
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-
-  
   
   <meta name="GENERATOR" content="Mozilla/4.7 [en-gb] (Win95; I) [Netscape]">
 
-
-  
   
   <meta name="Author" content="A. Garcimartín">
 
-
-  
   
   <meta name="language" content="es">
 
-
-  
   
   <meta name="Description" content="introducción programación Matlab">
 
-
-  
   
   <meta name="KeyWords" content="introducción programación Matlab introduccion programacion 
 
-INTRODUCCIÓN PROGRAMACIÓN INTRODUCCION PROGRAMACION MATLAB"><title>Introducción a la programación con Matlab</title></head><body style="direction: ltr;" alink="#ff0000" bgcolor="#ede7c7" link="#0000ee" text="#000000" vlink="#551a8b">
+INTRODUCCIÓN PROGRAMACIÓN INTRODUCCION PROGRAMACION MATLAB">
+  <title>Introducción a la programación con Matlab</title>
 
-
-<center><img src="escudorrojo.gif" lowsrc="escudo2.gif" alt="escudo" align="left" height="150" width="120"> <b><i><font color="#c0165f"><font size="+3">Introducción a la programación con Matlab</font></font></i></b>
+  
+</head><body style="color: rgb(0, 0, 0); background-color: rgb(237, 231, 199); direction: ltr;" alink="#ff0000" link="#0000ee" vlink="#551a8b">
+<center><img src="matlab0_files/escudorrojo.gif" lowsrc="escudo2.gif" alt="escudo" align="left" height="150" width="120"> <b><i><font color="#c0165f"><font size="+3">Introducción a la programación con
+Matlab</font></font></i></b>
 <br>
-
-
 <hr width="100%"> <br>
-
-
-<b><i><font color="#800000">por<font size="+1"> <a target="_blank" href="https://sites.google.com/unav.es/angelgarcimartin/">Ángel Garcimartín</a></font></font></i></b>
+<b><i><font color="#800000">por<font size="+1"> <a target="_blank" href="https://sites.google.com/unav.es/angelgarcimartin/">Ángel
+Garcimartín</a></font></font></i></b>
 <br>
-
-
-<font color="#0000ee"><font size="+1"><a target="_blank" href="https://www.unav.edu/web/departamento-de-fisica-y-matematica-aplicada/inicio">Departamento de Física y
+<font color="#0000ee"><font size="+1"><a target="_blank" href="https://www.unav.edu/web/departamento-de-fisica-y-matematica-aplicada/inicio">Departamento
+de Física y
 Matemática Aplicada</a></font></font></center>
 
-
 <dt>
-  
-  
   <hr size="6" width="100%"></dt>
 
-
 <br>
-
 
 &nbsp; <dd> <b>E</b>sta página pretende servir de guía
 para dar los primeros pasos en la programación. Para aprender,
@@ -67,7 +45,6 @@ el lenguaje que se emplee es -hasta cierto punto- irrelevante: lo
 más importante son los conceptos. Una vez conocido un lenguaje,
 pasar a otro no suele resultar difícil. Como Matlab es un
 lenguaje simple, resulta idóneo para los comienzos.</dd>
-
 
 <dd> Un programa consiste en una serie de instrucciones que se ejecutan
 secuencialmente (una detrás de otra). Por lo tanto, es requisito
@@ -78,52 +55,25 @@ a Matlab</a>. Especialmente necesario es haber confeccionado
 previamente un <i>script</i> (allí se indica cómo
 hacerlo).</dd>
 
-
 <dd> &nbsp;&nbsp;&nbsp; Este documento consta de los siguientes
 apartados:</dd>
 
-
 <blockquote> <dd> <a href="#Nociones">Nociones preliminares</a></dd>
-
-
   <dd> <a href="#control">Control del flujo</a></dd>
-
-
   <dd> <a href="#condiciones">Condiciones</a></dd>
-
-
   <dd> <a href="#ramificaciones">Ramificaciones</a></dd>
-
-
   <dd> <a href="#bucles">Bucles</a></dd>
-
-
   <dd> <a href="#estilo">Estilo</a></dd>
-
-
   <dd> <a href="#ejercicios">Ejercicios y soluciones</a></dd>
-
-
   <dd> <a href="#Archivos_para_descargar">Archivos para descargar</a></dd>
-
-
   <dd> <a href="#sugerencias">Sugerencias</a></dd>
-
-
 </blockquote>
-
 
 <dd> &nbsp;
-  
-  
   <hr width="100%"><a name="Nociones"></a><b><font color="#c0165f"><font size="+2">Nociones preliminares</font></font></b></dd>
 
-
 <blockquote> <dd> <i><font color="#800000">Antes de empezar ...</font></i></dd>
-
-
 </blockquote>
-
 
 <dd> <b>L</b>a elaboración de un programa para Matlab es muy
 sencilla. Basta abrir un documento de texto (se puede hacer con
@@ -133,12 +83,9 @@ guardar el documento con la extensión <b>.m</b> (por ejemplo:
 miprog.m). Matlab reconoce automáticamente los ficheros que
 tienen extensión .m: si en la ventana de comandos se introduce</dd>
 
-
 <br>
 
-
 &nbsp;&nbsp;&nbsp; <tt><font size="+1">» miprog</font></tt> <br>
-
 
 las órdenes almacenadas en el fichero miprog.m se
 ejecutarán, una tras otra. A ese recorrido a través de
@@ -156,17 +103,11 @@ en cada circunstancia. Así, un programa puede "decidir", llegado
 a un punto, ejecutar unos comandos u otros en función del valor
 que
 tome una variable, por poner un caso.
-  
-  
   <hr width="100%">&nbsp;<a name="control"></a><b><font color="#c0165f"><font size="+2">Control de flujo</font></font></b></dd>
-
 
 <blockquote> <dd> <i><font color="#800000">Al proceso de toma de
 decisiones se le llama control del flujo</font></i></dd>
-
-
 </blockquote>
-
 
 <dd> <b>A</b>ntes de ponerse a escribir el programa, sobre todo si es
 un poco largo o complejo, es útil trazar un esquema, en lenguaje
@@ -175,17 +116,13 @@ de flujo</b>. Si lo que se pretende está claro, escribir el
 programa se reduce a traducir el diagrama de flujo del castellano al
 lenguaje de Matlab.</dd>
 
-
 <dd> Veamos un caso simple. Construyamos el diagrama de flujo de
 un programa que escoja un número al azar del 0 al 9 y nos pida
 que lo adivinemos. Una vez escogido el número, el programa debe
 informar si hemos acertado o no. El diagrama de flujo correspondiente
 es</dd>
 
-
-<dd> <img src="dia_flu0.jpg" align="absbottom" height="318" width="256">
-  <i> Diagrama de flujo.</i></dd>
-
+<dd> <img src="matlab0_files/dia_flu0.jpg" align="absbottom" height="318" width="256"> <i> Diagrama de flujo.</i></dd>
 
 <dd> En un diagrama de flujo ha de buscarse la claridad, la
 concisión, el rigor. Con un buen diagrama de flujo, gran parte
@@ -196,17 +133,12 @@ más eficaz, sin embargo, escribir antes el diagrama de flujo,
 para
 luego intentar pasarlo al lenguaje informático elegido.</dd>
 
-
 <br>
-
 
 <hr width="100%"><a name="condiciones"></a><b><font color="#c0165f"><font size="+2">Condiciones</font></font></b>
 <blockquote> <dd> <i><font color="#800000">Son las preguntas
 básicas a las que se puede responder sí o no</font></i></dd>
-
-
 </blockquote>
-
 
 <dd> <b>P</b>ara implementar el control del flujo, son muy
 útiles unas expresiones que permiten comparar dos variables
@@ -218,237 +150,119 @@ y si no</i>, <i>...</i> ; o bien: <i>caso de que la variable x sea
 menor
 que cero, hacer tal cosa</i>.</dd>
 
-
 <dd> Las condiciones se construyen con <b>operadores relacionales</b>,
 como son los siguientes:</dd>
 
-
 <center>
 <table bgcolor="#ffcccc" border="2">
-
-
   <tbody>
-
-
     <tr>
-
-
       <td align="center" valign="CENTER">
-      
-      
       <center><tt><font size="+1">&gt;</font></tt></center>
-
-
       </td>
-
-
       <td align="center" valign="CENTER">
-      
-      
       <center><font size="+1">mayor que</font></center>
-
-
       </td>
-
-
     </tr>
-
-
     <tr>
-
-
       <td>
-      
-      
       <center><tt><font size="+1">&lt;</font></tt></center>
-
-
       </td>
-
-
       <td align="center" valign="CENTER">
-      
-      
       <center><font size="+1">menor que</font></center>
-
-
       </td>
-
-
     </tr>
-
-
     <tr align="center" valign="CENTER">
-
-
       <td>
-      
-      
       <center><tt><font size="+1">==</font></tt></center>
-
-
       </td>
-
-
       <td align="center" valign="CENTER">
-      
-      
       <center><font size="+1">igual que</font></center>
-
-
       </td>
-
-
     </tr>
-
-
     <tr>
-
-
       <td>
-      
-      
       <center><tt><font size="+1">~=</font></tt></center>
-
-
       </td>
-
-
       <td>
-      
-      
       <center><font size="+1">diferente que</font></center>
-
-
       </td>
-
-
     </tr>
-
-
     <tr align="center" valign="CENTER">
-
-
       <td>
-      
-      
       <center><tt><font size="+1">&lt;=</font></tt></center>
-
-
       </td>
-
-
       <td>
-      
-      
       <center><font size="+1">menor o igual que</font></center>
-
-
       </td>
-
-
     </tr>
-
-
     <tr align="center" valign="CENTER">
-
-
       <td>
-      
-      
       <center><tt><font size="+1">&gt;=</font></tt></center>
-
-
       </td>
-
-
       <td>
-      
-      
       <center><font size="+1">mayor o igual que</font></center>
-
-
       </td>
-
-
     </tr>
-
-
-  
-  
   </tbody>
 </table>
-
-
 </center>
-
 
 <dd> Una condición, como se ha indicado, sólo admite dos
 respuestas: verdadero o falso. Así, a la pregunta ¿es <tt><font size="+1">x</font></tt> mayor o igual que <tt><font size="+1">y</font></tt>?,
 que en el lenguaje de Matlab se expresa <tt><font size="+1">x&gt;=y</font></tt>,
-sólo caben dos respuestas posibles: sí, es cierto, <tt><font size="+1">x</font></tt> es mayor o igual
+sólo caben dos respuestas posibles: sí, es cierto, <tt><font size="+1">x</font></tt>
+es mayor o igual
 que <tt><font size="+1">y</font></tt>; o bien, no, es falso, <tt><font size="+1">x</font></tt> no es mayor o igual que <tt><font size="+1">y</font></tt>.</dd>
-
 
 <dd> Dos observaciones. La primera: el operador relacional <i>igual que</i>
 se construye con <i>dos</i> símbolos <tt><font size="+1">==</font></tt>.
 El motivo es el siguiente: si se escribe <tt><font size="+1">x=3</font></tt>,
 el resultado es que se le asigna a <tt><font size="+1">x</font></tt>
 el valor <tt><font size="+1">3</font></tt>. No se hace ninguna
-pregunta. Si lo que se desea es preguntar ¿es <tt><font size="+1">x </font></tt>igual a <tt><font size="+1">3</font></tt>?,
+pregunta. Si lo que se desea es preguntar ¿es <tt><font size="+1">x </font></tt>igual
+a <tt><font size="+1">3</font></tt>?,
 no se puede escribir<tt><font size="+1"> x=3</font></tt>, pues en este
 caso <tt><font size="+1">x</font></tt> tomaría el valor <tt><font size="+1">3</font></tt>, independientemente de lo que valiera antes.
 En cambio, <tt><font size="+1">x==3</font></tt> es el análogo
-en lenguaje informático a la pregunta: ¿es <tt><font size="+1">x</font></tt> igual a <tt><font size="+1">3</font></tt>?.
+en lenguaje informático a la pregunta: ¿es <tt><font size="+1">x</font></tt>
+igual a <tt><font size="+1">3</font></tt>?.
 Tras la pregunta <tt><font size="+1">x==3 </font></tt>la variable <tt><font size="+1">x </font></tt>sigue valiendo lo mismo que antes<tt><font size="+1">.</font></tt>La segunda observación es una
 pequeña astucia: la tilde ~ del operador <i>diferente que</i>
 se consigue apretando la tecla Alt y -sin soltarla- escribiendo con el
 teclado el número 126. En algunos sistemas operativos,
 también sirve apretar AltGr y, sin soltarla, apretar la tecla 4.</dd>
 
-
 <dd> Las condiciones se pueden agrupar en construcciones
 lógicas: <tt>condición1 Y condición2</tt>, <tt>condición1
 O condición2</tt>, etcétera. Consúltese el manual
 de Matlab en lo relativo a este tópico.</dd>
 
-
 <dd> En resumen: con las expresiones relacionales se pueden realizar
 preguntas de respuesta unívoca (verdadero o falso), que permitan
 luego tomar una decisión.</dd>
 
-
 <br>
-
 
 <hr width="100%"><a name="ramificaciones"></a><b><font color="#c0165f"><font size="+2">Ramificaciones</font></font></b>
 <blockquote> <dd> <i><font color="#800000">Dependiendo de una
 condición, el programa decide el curso que seguirá</font></i></dd>
-
-
 </blockquote>
-
 
 <dd> <b>E</b>l resultado de una condición permite tomar una
 decisión, es decir, si la condición es verdadera se
 ejecutan determinadas sentencias. El diagrama de flujo se ramifica:</dd>
 
-
-<dd> <img src="dia_flu1.jpg" align="absbottom" border="0" height="318" width="256"> <i> Ramificación <b>if</b></i></dd>
-
+<dd> <img src="matlab0_files/c1.jpg" align="absbottom" border="0" height="318" width="256"> <i> Ramificación <b>if</b></i></dd>
 
 <dd> La ramificación más simple, expresada en este
 diagrama de flujo, se obtiene con la siguente sintaxis:</dd>
 
-
 <dd> <tt><font size="+1">if (<i>condición</i>)</font></tt></dd>
-
 
 <dd> <i><tt><font size="+1">&nbsp;&nbsp;&nbsp; sentencias</font></tt></i></dd>
 
-
 <dd> <tt><font size="+1">end</font></tt></dd>
-
 
 <dd> (lo que va en cursiva, hay que sustituirlo por las expresiones
 adecuadas; <tt><font size="+1">if</font></tt> y <tt><font size="+1">end</font></tt>
@@ -456,19 +270,14 @@ son <i>palabras clave</i> del lenguaje informático, y no se
 pueden utilizar para otra cosa, p. ej. una variable no puede -no
 debería- llamarse <tt><font size="+1">if</font></tt>).</dd>
 
-
 <dd> Un caso concreto:</dd>
 
-
 <dd> <tt><font size="+1">if(length(sitios)&gt;1)</font></tt></dd>
-
 
 <dd> <tt><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 recta=polyfit(x,y,1);</font></tt></dd>
 
-
 <dd> <tt><font size="+1">end</font></tt></dd>
-
 
 <dd> Leído en lenguaje corriente: si la longitud del vector <tt><font size="+1">sitios</font></tt> es mayor que 1, se realiza el ajuste
 lineal indicado en la instrucción <tt><font size="+1">recta=polyfit(x,y,1)</font></tt>.
@@ -476,44 +285,35 @@ Caso contrario (si la longitud del vector <tt><font size="+1">sitios</font></tt>
 es menor o igual a 1) esa instrucción no se ejecuta (y el
 programa sigue en la instrucción que venga después de <tt><font size="+1">end</font></tt>).</dd>
 
-
 <dd> Existe la posibilidad de ejecutar ciertas sentencias si la
 condición es verdadera, y otras diferentes si la
 condición es falsa:</dd>
 
-
 <dd> <tt><font size="+1">if (<i>condición</i>)</font></tt></dd>
-
 
 <dd> <i><tt><font size="+1">&nbsp;&nbsp;&nbsp; sentencias A</font></tt></i></dd>
 
-
 <dd> <tt><font size="+1">else</font></tt></dd>
-
 
 <dd> <tt><font size="+1">&nbsp;&nbsp;&nbsp; <i>sentencias B</i></font></tt></dd>
 
-
 <dd> <tt><font size="+1">end</font></tt></dd>
-
 
 <dd> dicho de otra manera: si la condición se cumple, se
 ejecutan las <i><tt><font size="+1">sentencias A</font></tt></i>; si
 no, se ejecutan las <i><tt><font size="+1">sentencias B</font></tt></i>.</dd>
 
-
-<dd> <img src="dia_flu2.jpg" align="absbottom" height="318" width="256">
-  <i> Diagrama de flujo de una ramificación if / else</i></dd>
-
+<dd> <img src="matlab0_files/dia_flu2.jpg" align="absbottom" height="318" width="256"> <i> Diagrama de flujo de una ramificación
+if / else</i></dd>
 
 <dd> Una vez se hayan ejecutado las sentencias que correspondan (las <tt><font size="+1">sentencias A</font></tt> si la condición es
 verdadera, las <tt><font size="+1">sentencias B</font></tt> en caso
 contrario) el programa continúa con las instrucciones que vengan
 después de <tt><font size="+1">end</font></tt>.</dd>
 
-
 <dd> Es de señalar que las ramificaciones se pueden <i>anidar</i>
-(una condición dentro de otra: dentro de las <i><tt><font size="+1">sentencias A</font></tt></i> o de las<i> <tt><font size="+1">sentencias
+(una condición dentro de otra: dentro de las <i><tt><font size="+1">sentencias
+A</font></tt></i> o de las<i> <tt><font size="+1">sentencias
 B</font></tt></i> en el anterior diagrama de flujo). El código
 se vuelve más complejo. También se pueden construir
 ramificaciones con varias posibilidades: la sintaxis hace uso de las
@@ -522,39 +322,28 @@ end</font></tt>. Se remite para una explicación más
 detallada a la ayuda de Matlab
 (término de búsqueda: elseif).</dd>
 
-
 <dd> Otra posibilidad de ramificación múltiple la ofrece
 la construcción <b>switch</b>. La sintaxis es:</dd>
 
-
 <dd> <tt><font size="+1">switch <i>variable</i></font></tt></dd>
-
 
 <dd> <tt><font size="+1">case <i>valor1</i>,</font></tt></dd>
 
-
 <dd> <tt><font size="+1">&nbsp;&nbsp;&nbsp; <i>sentencias A</i></font></tt></dd>
-
 
 <dd> <tt><font size="+1">case <i>valor2</i>,</font></tt></dd>
 
-
 <dd> <tt><font size="+1">&nbsp;&nbsp;&nbsp; <i>sentencias B</i></font></tt></dd>
-
 
 <dd> <tt><font size="+1">case ...</font></tt></dd>
 
-
 <dd> <tt><font size="+1">&nbsp;&nbsp;&nbsp; ...</font></tt></dd>
 
-
 <dd> <tt><font size="+1">end</font></tt></dd>
-
 
 <dd> (Como antes, lo escrito en cursiva debe sustituirse por las
 expresiones adecuadas). Las palabras clave son <tt><font size="+1">switch</font></tt>,
   <tt><font size="+1">case</font></tt>, <tt><font size="+1">end</font></tt>.</dd>
-
 
 <dd> La ramificación switch opera de la siguiente manera.
 Al llegar a la expresión <tt><font size="+1">switch <i>variable</i></font></tt>,
@@ -566,18 +355,13 @@ ramifique en unas pocas ramas. No tiene sentido intentar una
 ramificación switch con una variable que pueda tomar un
 número infinito de valores.</dd>
 
-
 <br>
-
 
 <hr width="100%"><a name="bucles"></a><b><font color="#c0165f"><font size="+2">Bucles</font></font></b>
 <blockquote> <dd> <i><font color="#993300">¿Varias secuencias
 que
 se ejecutan repetidas veces? Un bucle</font></i></dd>
-
-
 </blockquote>
-
 
 <dd> <b>H</b>ay ocasiones en las que es necesario repetir el mismo
 conjunto de instrucciones muchas veces, cambiando algunos detalles.
@@ -589,26 +373,21 @@ en ir tomando la media aritmética de cada tres puntos
 consecutivos.
 Es decir: desde <tt><font size="+1">i=2</font></tt> hasta <tt><font size="+1">n-1</font></tt>, m<tt><font size="+1">edia(i-1)=(x(i)+x(i-1)+x(i+1))/3</font></tt>.</dd>
 
-
 <dd> (Detalles: se empieza a contar en<tt> <font size="+1">i=2</font></tt>
 porque para el primer elemento de <tt><font size="+1">x</font></tt> no
 existe el elemento anterior; y se acaba en <tt><font size="+1">n-1</font></tt>
-por análoga razón; además, el primer componente de
-  <tt><font size="+1">media</font></tt> es el correspondiente a <tt><font size="+1">i=2</font></tt>, de ahí que se asigne el resultado a <tt><font size="+1">media(i-1)</font></tt>).</dd>
-
+por análoga razón; además, el primer componente de <tt><font size="+1">media</font></tt>
+es el correspondiente a <tt><font size="+1">i=2</font></tt>, de ahí
+que se asigne el resultado a <tt><font size="+1">media(i-1)</font></tt>).</dd>
 
 <dd> Eso es lo que se consigue con un bucle <b>for</b>, cuya sintaxis
 es:</dd>
 
-
 <dd> <tt><font size="+1">for <i>contador</i>=<i>inicio</i>:<i>paso</i>:<i>fin</i>,</font></tt></dd>
-
 
 <dd> <tt><font size="+1">&nbsp;&nbsp;&nbsp; <i>sentencias</i></font></tt></dd>
 
-
 <dd> <tt><font size="+1">end</font></tt></dd>
-
 
 <dd> Las palabras claves son <tt><font size="+1">for</font></tt>
 y <tt><font size="+1">end</font></tt>. Este bucle pone en marcha una
@@ -621,10 +400,7 @@ acaba
 y el programa continúa con las sentencias que haya más
 allá de <tt><font size="+1">end</font></tt>.</dd>
 
-
-<dd> <img src="dia_flu3.jpg" align="absbottom" height="318" width="256">
-  <i> Diagrama de flujo de un bucle for</i></dd>
-
+<dd> <img src="matlab0_files/dia_flu3.jpg" align="absbottom" height="318" width="256"> <i> Diagrama de flujo de un bucle for</i></dd>
 
 <dd> Obsérvese que un bucle como el indicado se implementa un
 número fijo de veces: desde <tt><font size="+1">inicio</font></tt>
@@ -638,24 +414,17 @@ sabe a priori cuántas veces será necesario realizar esas
 operaciones.
 En ese caso se emplea un bucle <b>while</b>:</dd>
 
-
 <dd> <tt><font size="+1">while(<i>condición</i>),</font></tt></dd>
-
 
 <dd> <tt><font size="+1">&nbsp;&nbsp;&nbsp; <i>sentencias</i></font></tt></dd>
 
-
 <dd> <tt><font size="+1">end</font></tt></dd>
-
 
 <dd> Este bucle ejecuta las <i><tt><font size="+1">sentencias</font></tt></i>
 mientras la <i><tt><font size="+1">condición</font></tt></i>
 sea verdadera.</dd>
 
-
-<dd> <img src="dia_flu4.jpg" align="absbottom" height="318" width="256">
-  <i> Diagrama de flujo de un bucle while</i></dd>
-
+<dd> <img src="matlab0_files/dia_flu4.jpg" align="absbottom" height="318" width="256"> <i> Diagrama de flujo de un bucle while</i></dd>
 
 <dd> Es posible sustituir la <tt><font size="+1">condición</font></tt>
 por una variable. En efecto: una variable que toma el valor cero
@@ -663,21 +432,15 @@ corresponde a una condición falsa. Si la variable toma un valor
 diferente de cero, es equivalente a una condición verdadera.
 Así, se puede escribir</dd>
 
-
 <dd> <tt><font size="+1">x=10;</font></tt></dd>
-
 
 <dd> <tt><font size="+1">while(x)</font></tt></dd>
 
-
 <dd> <tt><font size="+1">&nbsp;&nbsp;&nbsp; <i>sentencias</i></font></tt></dd>
-
 
 <dd> <tt><font size="+1">&nbsp;&nbsp;&nbsp; x=x-1;</font></tt></dd>
 
-
 <dd> <tt><font size="+1">end</font></tt></dd>
-
 
 <dd> Para <tt><font size="+1">x=10</font></tt>, la "condición"
 es verdadera puesto que <tt><font size="+1">x</font></tt> es diferente
@@ -686,7 +449,6 @@ hay que modificarlo manualmente (línea <tt><font size="+1">x=x-1</font></tt>)
 puesto que, al revés que lo que ocurre con el bucle for, este no
 gestiona ningún contador. En cuanto <tt><font size="+1">x</font></tt>
 tome el valor cero, la "condición" es falsa y el bucle acaba.</dd>
-
 
 <dd> Atención: es fácil caer en bucles infinitos. En el
 ejemplo anterior, si falta la línea <tt><font size="+1">x=x-1 </font></tt>y
@@ -700,17 +462,12 @@ se "cuelga", y hay que interrumpirlo desde el teclado apretando las
 teclas
 Ctrl+C.</dd>
 
-
 <br>
-
 
 <hr width="100%"><a name="estilo"></a><b><font color="#c0165f"><font size="+2">Estilo</font></font></b>
 <blockquote> <dd> <i><font color="#800000">Un programa elegante suele
 ser un buen programa</font></i></dd>
-
-
 </blockquote>
-
 
 <dd> <b>E</b>mpecemos diciendo que, en general, para realizar una
 tarea particular se pueden emplear muchos programas diferentes que den
@@ -723,7 +480,6 @@ más
 rápidas de implementar las instrucciones entre todas las
 posibles.</dd>
 
-
 <dd> La confección de programas se vuelve frecuentemente una
 tarea rutinaria donde el orden facilita las cosas. Repasar un programa
 una y otra vez, modificando poco a poco el código para
@@ -731,9 +487,7 @@ depurarlo, exige una cierta disciplina. Aunque cada uno tenga sus
 preferencias, es conveniente desarrollar algunos hábitos. Me
 atrevo a recomendar algunos:</dd>
 
-
 <ul>
-
 
   <li> El programa debe resultar de<b> fácil lectura</b>.
 Así, pasado el tiempo, es más sencillo revisarlo. Los
@@ -746,94 +500,47 @@ muestra. ¿Por qué llamar <tt><font size="+1">x</font></tt>
 o <tt><font size="+1">N</font></tt> a una variable? Los nombres
 abstractos
 restan claridad al programa.</li>
-
-
 </ul>
-
 
 <table bgcolor="#ffcccc" border="1" width="656">
 
-
   <tbody>
-
-
     <tr align="left">
-
-
       <td align="left" nowrap="nowrap" valign="top"><tt><font size="+1">N=10;</font></tt>
       <br>
-
-
       <tt><font size="+1">x=rand(1,N);</font></tt> <br>
-
-
       <tt><font size="+1">y=zeros(1,N);</font></tt> <br>
-
-
       <tt><font size="+1">for i=1:N,</font></tt> <br>
-
-
       <tt><font size="+1">&nbsp;&nbsp;&nbsp; y(i)=sum(x(1:i));</font></tt>
       <br>
-
-
       <tt><font size="+1">end</font></tt></td>
-
-
       <td><tt><font size="+1">num_pts=10;</font></tt> <br>
-
-
       <tt><font size="+1">prob=rand(1,num_pts);</font></tt> <br>
-
-
       <tt><font size="+1">prob_acum=zeros(1,num_pts);</font></tt> <br>
-
-
       <tt><font size="+1">for indice=1:num_pts,</font></tt> <br>
-
-
       <tt><font size="+1">&nbsp;&nbsp;&nbsp;
 prob_acum(indice)=sum(prob(1:indice));</font></tt> <br>
-
-
       <tt><font size="+1">end</font></tt></td>
-
-
     </tr>
-
-
-  
-  
   </tbody>
 </table>
-
 
 <dd> <i>Ambos códigos son equivalentes y se ejecutarán
 igual de rápido (los nombres largos de las variables no influyen
 en la velocidad de ejecución).</i></dd>
 
-
 <ul>
-
 
   <li> Introducir <b>comentarios</b> en el programa. Los comentarios
 son líneas que no se ejecutan, en las que se escriben
 aclaraciones explicativas. Para que una línea no se ejecute,
 basta escribir al
 principio de ella el símbolo %. Así:</li>
-
-
   <dt> <tt><font size="+1">&nbsp;&nbsp;&nbsp; %escala: 102 pixels = 8
 mm</font></tt></dt>
-
-
   <dt> <tt><font size="+1">&nbsp;&nbsp;&nbsp; d_m=8/102;</font></tt></dt>
-
-
   <dt> Un programa con comentarios es más fácil de
 entender.</dt>
-
-
   <li> Suele ser bueno <b>definir las variables al principio</b>. Ello
 evita tener que buscarlas a lo largo del código para cambiar su
 valor cuando sea necesario. Además, si es posible, es mejor
@@ -844,196 +551,107 @@ programa va más rápido si se define el vector
 vacío al principio (con el comando <tt><font size="+1">ones</font></tt>
 o <tt><font size="+1">zeros</font></tt>) que ir añadiendo
 componentes al vector conforme se van calculando.</li>
-
-
   <li> Para ver dónde empiezan y dónde acaban los bucles
 y ramificaciones, es costumbre <b>indentar</b> (introducir una
 sangría) en las líneas contenidas en ellos. Eso resulta
 de especial ayuda en los bucles y condiciones anidados.</li>
-
-
 </ul>
-
 
 <hr width="100%"> <b><a name="ejercicios"></a><font color="#c0165f"><font size="+2">Ejercicios y soluciones</font></font></b>
 <blockquote> <dd> <i><font color="#993300">Los problemas más
 interesantes suelen ser los que uno se encuentra en la vida real ...</font></i></dd>
-
-
 </blockquote>
 
-
 <blockquote>
-  
-  
   <blockquote>
-    
-    
     <blockquote>
-      
-      
       <h3>A. <u>Ejercicios</u></h3>
-
-
     </blockquote>
-
-
   </blockquote>
-
-
 </blockquote>
 
-
 <blockquote>
-  
-  
   <ul type="square">
-
-
     <li><font color="#993300"><font color="#000000">Escribir un
 programa que tome un número entero al azar entre el 0 y el 9,
 pregunte un
 número al usuario y le informe si acertó o no.</font></font></li>
-
-
     <li>Escribir un programa que tome un número entero al azar
 entre el 0 y el 9, y le pregunte un número al usuario hasta que
 acierte.</li>
-
-
     <li>Escribir una <u>función</u> que devuelva el valor
 absoluto del argumento. (<i>Nota</i>.- Ya existe en Matlab: <tt><font size="+1">abs(x)</font></tt>).</li>
-
-
     <li>Escribir una <u>función</u> que devuelva el radio
 (distancia al origen), recibiendo como argumento las coordenadas
 cartesianas <tt>(x,y)</tt>.<br>
-
-
     </li>
-
-
     <li>Escribir un programa que, tras pedir al usuario un
 número, le informe de si es par, impar o no entero.</li>
-
-
     <li>Escribir un programa que calcule las <font face="Courier New, Courier, monospace">N</font> primeras fracciones
 del
 tipo <font face="Courier New, Courier, monospace">1/i</font>, tras
 pedir <font face="Courier New, Courier, monospace">N</font> al usuario.</li>
-
-
     <li>Escribir un programa que calcule los cuadrados de los
 números enteros, hasta que el cuadrado sea mayor o igual que 100.</li>
-
-
-  
-  
   </ul>
-
-
-  
-  
   <blockquote>
-    
-    
     <blockquote>
-      
-      
       <h3>B. <u>Proyectos</u></h3>
-
-
     </blockquote>
-
-
   </blockquote>
-
-
-  
-  
   <ul type="square">
-
-
     <li>Realizar una criba de números primos, esto es, elaborar
 un programa que calcule en el menor tiempo posible la mayor cantidad de
 números primos consecutivos partiendo de los más
 pequeños. <br>
-</li>
-
-
-  
-  
+    </li>
   </ul>
-
-
 </blockquote>
-
 
 <blockquote>
-  
-  
   <blockquote> </blockquote>
-
-
 </blockquote>
-
 
 <hr size="2" width="100%"><b><font color="#c0165f"><font size="+2"><a name="Archivos_para_descargar"></a>Archivos para descargar</font></font></b>
 <blockquote>
-  
-  
-  <blockquote> <a target="_blank" href="matlab0_files/getstart_r12.pdf">"Geting started with Matlab"</a>
+  <blockquote> <a target="_blank" href="matlab0_files/getstart_r12.pdf">"Geting
+started with Matlab"</a>
 (guía básica de Matlab, formato pdf, 136 páginas,
 en inglés)<br>
-
-
     <a target="_blank" href="matlab0_files/datajust.dat"><br>
-
-
-datajust.dat</a> &nbsp; <a target="_blank" href="matlab0_files/dj.dat">dj.dat</a> &nbsp; <a target="_blank" href="matlab0_files/ruidat.dat">ruidat.dat</a> &nbsp; <a target="_blank" href="matlab0_files/manchas.dat">manchas.dat</a>
-&nbsp; <a target="_blank" href="matlab0_files/ecg2.dat">ecg2.dat</a> &nbsp; <a target="_blank" href="matlab0_files/ptfit.dat">ptfit.dat</a>
-&nbsp; <a target="_blank" href="matlab0_files/barrow.dat">barrow.dat</a> &nbsp; <a target="_blank" href="matlab0_files/mauna.dat">mauna.dat</a>
-&nbsp; <a target="_blank" href="matlab0_files/depo.dat">depo.dat</a> &nbsp; <br>
-
-
+datajust.dat</a> &nbsp; <a target="_blank" href="matlab0_files/dj.dat">dj.dat</a>
+&nbsp; <a target="_blank" href="matlab0_files/ruidat.dat">ruidat.dat</a>
+&nbsp; <a target="_blank" href="matlab0_files/manchas.dat">manchas.dat</a>
+&nbsp; <a target="_blank" href="matlab0_files/ecg2.dat">ecg2.dat</a>
+&nbsp; <a target="_blank" href="matlab0_files/ptfit.dat">ptfit.dat</a>
+&nbsp; <a target="_blank" href="matlab0_files/barrow.dat">barrow.dat</a>
+&nbsp; <a target="_blank" href="matlab0_files/mauna.dat">mauna.dat</a>
+&nbsp; <a target="_blank" href="matlab0_files/depo.dat">depo.dat</a>
+&nbsp; <br>
     <br>
-
-
-    <a target="_blank" href="matlab0_files/b52b.bmp">b52b.bmp</a> &nbsp; <a target="_blank" href="matlab0_files/f14.bmp">f14.bmp</a> &nbsp;&nbsp; <a target="_blank" href="matlab0_files/p_dogs.bmp">p_dogs.bmp</a>&nbsp;&nbsp;<a target="_blank" href="matlab0_files/rg.jpg"></a> </blockquote>
-
-
+    <a target="_blank" href="matlab0_files/b52b.bmp">b52b.bmp</a>
+&nbsp; <a target="_blank" href="matlab0_files/f14.bmp">f14.bmp</a>
+&nbsp;&nbsp; <a target="_blank" href="matlab0_files/p_dogs.bmp">p_dogs.bmp</a>&nbsp;&nbsp;
+  </blockquote>
 </blockquote>
-
 
 <hr width="100%">
 <p><a name="sugerencias"></a><font color="#993300">Se agradece
 cualquier sugerencia
 sobre este documento, especialmente las contribuciones de ejemplos. <br>
-
-
-Puede enviarse un mensaje por correo electrónico a</font><font color="#800000"> </font><i><font color="#ff00ff"><a href="mailto:jbragard@unav.es"></a></font></i><img src="elm_JB.png" title="" alt="elm" style="width: 200px; height: 24px;" align="middle"><br>
-
-
+Puede enviarse un mensaje por correo electrónico a</font><font color="#800000"> </font><img src="matlab0_files/elm_JB.png" title="" alt="elm" style="width: 200px; height: 24px;" align="middle"><br>
 </p>
-
 
 <hr width="100%"> <br>
 
+<br>
 
 <br>
 
+<br>
 
 <br>
 
-
 <br>
-
-
-<br>
-
-
-<br>
-
-
 
 </body></html>
