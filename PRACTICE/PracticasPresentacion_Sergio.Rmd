@@ -1,0 +1,1383 @@
+---
+title: "Primeros pasos con R y RStudio"
+output:
+  html_document:
+    fig_height: 4.5
+    fig_width: 6
+    toc: yes
+    toc_float: yes
+  beamer_presentation:
+    fig_height: 4
+    fig_width: 4
+    slide_level: 4
+    theme: Madrid
+  ioslides_presentation:
+    slide_level: 4
+  word_document: default
+  slidy_presentation:
+    slide_level: 4
+  pdf_document:
+    fig_height: 3
+    fig_width: 4
+    toc: yes
+header-includes: \widowpenalties 1 150
+---
+
+```{r "setup", include=FALSE}
+require("knitr")
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  echo = TRUE,
+  #warning = FALSE,
+  #message = FALSE,
+  cache = TRUE,
+  fig.align = "center"
+)
+```
+
+
+
+
+```{r, echo=FALSE, eval=FALSE}
+Para cambiar el tamaño del input insertar esto antes del chunk
+cambiando footnotesize por scriptsize si aún se sale. 
+
+\let\oldShaded\Shaded
+\let\endoldShaded\endShaded
+\renewenvironment{Shaded}{\footnotesize\oldShaded}{\endoldShaded}
+
+
+Para cambiar el tamaño del output insertar esto antes del chunk
+cambiando footnotesize por scriptsize si aún se sale. 
+
+\let\oldverbatim\verbatim
+\let\endoldverbatim\endverbatim
+\renewenvironment{verbatim}{\footnotesize\oldverbatim}{\endoldverbatim}
+```
+
+
+
+# Tipos de variables en R
+
+####  {.allowframebreaks}
+En estadistica tratamos con variables cuantitativas continuas y discretas y variables cualitativas nominales y ordinales veamos como codificar un ejemplo en R.
+
+
+
+## Datos numéricos.
+####  {.allowframebreaks}
+
+Suponer que los datos 64, 79, 69, 77, 91 representan el peso en kg de 5 personas y queremos acumularlos en una variable numérica que se llame peso. Escribiremos lo siguiente:
+
+```{r}
+peso <- c(64, 79, 69, 77, 91)
+peso
+```
+
+
+Vamos ahora a introducir la altura de cinco personas en metros
+```{r}
+
+altura <- c( 1.55, 1.78, 1.67, 1.78, 1.93 )
+
+```
+
+
+
+## Datos cualitativos.
+####  {.allowframebreaks}
+En general para trabajar con datos cualitativos en R, tendremos que definir
+las variables de tipo factor que contienen además de los datos, las distintas modalidades o niveles que estas pueden tomar.
+
+
+
+Ahora queremos introducir el sexo de estas cinco personas. Tenemos los datos *mujer, hombre, mujer, hombre, hombre*. Para que el valor de una variable sea texto (cadena de caracteres) hay que escribirlo entre comillas. Así podríamos introducir los datos anteriores como:
+
+```{r}
+sexo <- c( "mujer", "hombre", "mujer", "hombre", "hombre" )
+sexo
+```
+
+####  {.allowframebreaks}
+
+podemos transformar esta variable en una variable de tipo factor con:
+
+```{r}
+sexo <- as.factor(sexo)
+sexo
+```
+
+Notar como ademas de los valores de la variable me vienen especificados las modalidades o niveles `levels`.
+
+####  {.allowframebreaks}
+
+Otra manera mas segura de obtener los resultados es especificar nosotros los niveles. Esto nos asegura que estén todos los niveles que interesan y en el orden adecuado (caso de que el orden importe)
+
+```{r}
+sexo <- factor(sexo, levels = c("hombre", "mujer"))
+sexo
+```
+
+####  {.allowframebreaks}
+
+En ocasiones es conveniente utilizar un "codigo numérico" para los distintos niveles (modalidades) de las variables cualitativas `levels` y asignar etiquetas `labels` a los niveles.
+
+El grupo sanguíneo es un factor con 4 niveles. Por ejemplo queremos codificar el grupo sanguíneo con números de 1 a 4 donde 1 es A, 2 es B, 3 es AB y  4 es O. Ahora si mis cinco datos tienen grupo sanguíneo *A, B, A ,A, O*, puedo introducirlos usando los niveles antes descritos con las siguientes ordenes.
+
+####  {.allowframebreaks}
+
+```{r}
+gruposang <- c(1, 2, 1, 1, 4)
+gruposang <- factor(gruposang,
+                    levels = 1:4,
+                    labels = c("A","B","AB","O"))
+gruposang
+```
+
+####  {.allowframebreaks}
+
+En resumen, para trabajar con variables cualitativas en R, es conveniente declararla como un factor que tendrá:
+
+* _datos_ numéricos o caracteres. En el ejemplo anterior los que había en gruposang
+* _niveles_ (`levels`) pueden ser numeros o cadenas de caracteres en este caso: 1,2,3 y 4
+* _etiquetas_ (`labels`) siempre cadenas de caracteres, en este ejemplo _A_, _B_, _AB_, _O_.
+
+Cuando los niveles sean ya cadenas de caracteres no hará falta especificar las etiquetas.
+
+
+
+#### Variables Cualitativas Ordinales {.allowframebreaks} 
+
+Podemos especificar que los niveles están ordenados en un factor que represente una variable ordinal. Imaginar que tenemos una variable que nos dice como se encuentran fisicamente las personas entre bien regular y mal.
+
+```{r}
+estfis <- c("bien","bien","mal","regular", "regular")
+```
+
+####  {.allowframebreaks}
+
+Podemos definir un factor ordenado mediante:
+
+```{r}
+estfis <- factor(estfis, 
+                 levels=c("mal", "regular", "bien"), 
+                 ordered= TRUE)
+estfis
+```
+
+Vemos como ahora los niveles aparecen ordenados.
+
+
+
+## Data frames
+####  {.allowframebreaks}
+
+Los data frames nos permiten codificar datos agrupados por individuos, por ejemplo supongamos que las variables peso, altura, sexo y grupo sanguíneo que hemos introducido antes corresponden a la mismas personas. Es decir el la primera persona pesa 64.6 kg mide 155cm, es mujer y tiene grupo sanguíneo A y así con las demás posiciones. Podemos agrupar todos esos datos en R usando un data frame.
+
+####  {.allowframebreaks}
+
+
+
+```{r}
+misdatos <- data.frame(peso, altura, sexo, gruposang, estfis)
+misdatos
+```
+
+Observar que en la primera columna aparece un número que simplemente va contando el número de individuos que tiene mi muestra.
+
+####  {.allowframebreaks}
+
+La orden `str(objeto)` nos da información sobre un objeto de R. Es especialmente útil para saber lo que hay dentro de un data.frame
+
+```{r}
+str(misdatos)
+```
+
+####  {.allowframebreaks}
+
+Si tenemos un data frame y queremos usar una de las variables que contiene escribiremos nombredataframe$nombre variable. Por ejemplo:
+
+```{r}
+misdatos$altura
+```
+
+####  {.allowframebreaks}
+
+Para guardar datos almacenados en un data frame como un fichero cvs (para leerlos con otro progama despues) podemos hacerlo con la orden:
+
+```{r}
+write.table(misdatos, file= "misdatos.csv", 
+            sep=";", dec=",")
+```
+
+Podemos  usar `read.table` para leer un data frame que hayamos guardado con el comando `write.table`
+
+####  {.allowframebreaks}
+
+```{r}
+misdatosbis  <-  read.table("misdatos.csv", 
+                            header=TRUE, sep=";", dec=",")
+misdatosbis
+str(misdatosbis)
+```
+
+####  {.allowframebreaks}
+
+Por defecto nos ha tomado las columnas de caracteres como factores pero hemos perdido el orden. ¿Qué peligro tiene que R declare automáticamente cadenas de caracteres como factores?
+
+
+
+# Importar datos.
+
+Es posible importar datos a R desde cualquier archivo de texto, desde Excel desde otros programas de estadística como SPSS, STATA o SAS y lo que aún es más útil cuando se manejan muchos datos, R se puede comunicar con bases de datos como Acess o mySQL . 
+
+
+Recordad que es fácil es importar datos desde un fichero de texto (.txt, .csv) donde tenemos los datos en columnas y como encabezamiento de cada columna el nombre de la variable correspondiente.  Esto ocurrirá cuando hayamos guardado con `write.table()`
+
+####  {.allowframebreaks}
+
+Vamos a ver como importar datos guardados desde una hoja de Excel y mas en general desde un archivo .csv
+(_comma separated values_)
+
+Para importar un data frame desde Excel nuestra hoja de cálculo debe a ser posible:
+
+- tener los datos de cada variable en una columna, 
+- los nombres de la variable en la primera fila
+- los datos en las filas siguentes. 
+
+Hemos de guardar el fichero Excel como un fichero csv ( primero usar guardar como...  
+y despues seleccionar en guardar como tipo  CSV( delimitado por comas) (*.csv)  
+
+y leerlo con el formato adecuado entre los descritos arriba 
+
+(en el caso de Excel en castellano,  tenemos los decimales separados por comas y por tanto necesitamos las opciones  `sep=";", dec=","`
+
+####  {.allowframebreaks}
+
+En general podemos importar datos separados por comas (extensión .csv) guardados desde Excel en español con:
+
+
+```{r eval=FALSE}
+misdatos <- read.table("mifichero.csv", 
+                       header=TRUE, sep=";", dec=",")
+```
+
+
+Que corresponde a datos separados por punto y coma con decimales separados por comas (que es como exporta excel los ficheros de datos "en español") 
+
+####  {.allowframebreaks}
+
+Una manera rápida de importar datos es seleccionar las casillas que nos interesen, dar a copiar y después en R usar.
+
+```{r eval=FALSE}
+datos <- read.delim("clipboard", 
+                    header = TRUE, dec = ",", check.names=T)
+```
+
+Pero solo lo recomendamos para hacer alguna prueba rápida ya que no es reproducible (no queda constancia de lo que hemos seleccionado).
+
+####  {.allowframebreaks}
+
+
+En el archivo  excel `gimnasio.xlsx` encontras los datos de peso altura y ejercicio de 20 alumnos.  En la columna ejercicio hemos usado los valores 1 para Nunca, 2 para Ocasional y 3 para Frecuente.
+
+####  {.allowframebreaks}
+
+Una vez guardado como .csv desde excel lo leemos con:
+
+```{r}
+gimnasio <- read.csv("gimnasio.csv", 
+                     header=TRUE, sep=";",dec=",")
+```
+
+####  {.allowframebreaks}
+
+Dos ordenes muy útiles para hacernos una idea de lo que hay en un dataframe que hemos creado son `head(nombredataframe)` y `tail(nombredataframe)` que nos da los primeros y últimos valores del dataframe respectivamente. Por ejemplo
+
+```{r}
+head(gimnasio)
+```
+
+####  {.allowframebreaks}
+
+Con cualquier objeto de R podemos  usar `str(objeto)` que nos dice que tipo de objetos hay almacenados
+
+```{r}
+str(gimnasio)
+```
+
+
+Vemos que hay que transformar la última columna en un factor ordenado.
+
+####  {.allowframebreaks}
+
+```{r}
+gimnasio$ejercicio <- factor(gimnasio$ejercicio,
+            levels=1:3, 
+            labels=c("Nunca", "Ocasional", "Frecuente"),
+            ordered= TRUE)
+
+str(gimnasio)
+```
+
+####  {.allowframebreaks}
+
+Notar que no puedo acceder directamente a las variables de dentro del data frame. Por ejemplo para calcular la media de una variable se usa `mean(nombrevariable)` 
+
+```{r error=TRUE}
+mean(peso)
+```
+
+Nos da la media de peso... **del conjunto de 5 datos anterior.**
+
+####  {.allowframebreaks}
+
+En general usaremos `nombredataframe$nombrevariable` o `nombredataframe[ ,indice de la variable]` para acceder a una variable dentro de un dataframe.
+
+```{r}
+mean(gimnasio$peso)
+mean(gimnasio[ , 1])
+```
+
+####  {.allowframebreaks}
+
+Otra manera de acceder dentro de un data frame es con la orden `with(nombredataframe, operacion)`
+
+```{r}
+with(gimnasio, mean(peso))
+```
+
+
+
+
+# Estadística  básica
+####  {.allowframebreaks}
+
+Veamos como 
+
+- obtener los distintos estadísticos descriptivos usando R.
+- hacer unos gráficos básicos
+- inferencia univariante.
+
+
+
+## Variables cuantitativas
+####  {.allowframebreaks}
+Por ejemplo para los datos de peso introducidos anteriormente tenemos:
+
+```{r}
+mean(gimnasio$peso)
+median(gimnasio$peso)
+sd(gimnasio$peso)
+var(gimnasio$peso) 
+```
+
+
+
+Nos dan la media, mediana, desviación típica y varianza respectivamente.
+
+####  {.allowframebreaks}
+
+Para obtener los cuartiles, o en general cualquier percentil podemos usar la orden `quantile(variable, probs=c(percentiles))`
+
+```{r}
+quantile(gimnasio$peso)
+quantile(gimnasio$peso,probs=c(0.05, 0.95))
+```
+
+####  {.allowframebreaks}
+
+Podemos obtener un resumen (datos mayor y menor, cuartiles mediana y media para variables cuantitativas o una tabla de frecuencias parar variables cualitativas) con
+
+```{r}
+summary(gimnasio$peso)
+```
+
+####  {.allowframebreaks}
+
+Veamos algunos gráficos útiles para variables cuantitativas:
+
+```{r,eval=FALSE}
+hist (gimnasio$peso, 
+      main="Mi primer histograma", 
+      xlab="Peso en Kg", ylab="Frecuencia", 
+      col="grey")
+```
+
+####  {.allowframebreaks}
+
+```{r, echo=FALSE}
+hist (gimnasio$peso, 
+      main="Mi primer histograma", 
+      xlab="Peso en Kg", ylab="Frecuencia", 
+      col="grey")
+```
+
+####  {.allowframebreaks}
+
+```{r, eval=FALSE}
+boxplot (gimnasio$peso, 
+         main="Diagrama de cajas", 
+         ylab="Peso en Kg")
+```
+
+####  {.allowframebreaks}
+
+```{r, echo=FALSE}
+boxplot (gimnasio$peso, 
+         main="Diagrama de cajas", 
+         ylab="Peso en Kg")
+```
+
+####  {.allowframebreaks}
+
+```{r, eval=FALSE}
+stripchart(gimnasio$peso, 
+           main="Stripchart", 
+           method="stack", 
+           xlab="Peso en Kg")
+```
+
+####  {.allowframebreaks}
+
+```{r, echo=FALSE}
+stripchart(gimnasio$peso, 
+           main="Stripchart", 
+           method="stack", 
+           xlab="Peso en Kg")
+```
+
+####  {.allowframebreaks}
+
+Podemos añadir los datos a un histograma con:
+
+```{r,fig.height=4,fig.width=4, eval=FALSE}
+hist (gimnasio$peso, 
+      main="Mi segundo histograma", 
+      xlab="Peso en Kg", ylab="Frecuencia", 
+      col="grey")
+rug(gimnasio$peso)
+```
+
+####  {.allowframebreaks}
+
+```{r,fig.height=4,fig.width=4,echo=FALSE}
+hist (gimnasio$peso, 
+      main="Mi segundo histograma", 
+      xlab="Peso en Kg", ylab="Frecuencia", 
+      col="grey")
+rug(gimnasio$peso)
+```
+
+####  {.allowframebreaks}
+
+y a un boxplot con:
+```{r, eval=FALSE}
+boxplot (gimnasio$peso, 
+         main="Diagrama de cajas", 
+         ylab="Peso en Kg",
+         outline=FALSE   #Esta opción quita los outlayers de la salida.
+         )
+
+stripchart(gimnasio$peso, 
+           method="jitter", 
+           vertical=TRUE, 
+           pch=20, 
+           col="grey", 
+           add=TRUE)
+```
+
+####  {.allowframebreaks}
+
+```{r, echo=FALSE}
+boxplot (gimnasio$peso, 
+         main="Diagrama de cajas", 
+         ylab="Peso en Kg",
+         outline=FALSE   #Esta opción quita los outlayers de la salida.
+         )
+
+stripchart(gimnasio$peso, 
+           method="jitter", 
+           vertical=TRUE, 
+           pch=20, 
+           col="grey", 
+           add=TRUE)
+```
+
+
+## Variables Cualitativas
+####  {.allowframebreaks}
+Para variables cualitativas no tiene sentido hacer los estadísticos anteriores ni los gráficos. 
+
+Podemos hacer una tabla de frecuencias con la orden table
+
+```{r}
+table(gimnasio$ejercicio)
+# para obtener frecuencias relativas  dividimos por el 
+# número de datos, que obtendremos con la orden 
+# nrow(dataframe)  o length(vector)
+
+table(gimnasio$ejercicio)/nrow(gimnasio) 
+```
+
+####  {.allowframebreaks}
+
+```{r}
+summary(gimnasio$ejercicio)
+```
+
+####  {.allowframebreaks}
+
+Ahora podemos hacer gráficos usando esa tabla de frecuencias. Por ejemplo:
+```{r,fig.height=4,fig.width=4}
+barplot(table(gimnasio$ejercicio), 
+        ylab="Frecuencia absoluta")
+```
+
+####  {.allowframebreaks}
+
+```{r,fig.height=4,fig.width=4}
+barplot(table(gimnasio$ejercicio)/nrow(gimnasio), 
+        ylab="Frecuencia relativa")
+```
+
+
+Nos da un diagrama de barras. 
+
+
+
+# Intervalos de confianza y tests de hipótesis. (Una y dos medias)
+####  {.allowframebreaks}
+Veremos los procedimientos para calcular intervalos de confianza para una y dos medias usando r. En ambos casos usaremos la orden `t.test`
+
+
+
+## Estimación de una media.
+####  {.allowframebreaks}
+R nos permite estimar mediante intervalo de confianza, la media de una población a partir de los datos de una muestra.
+
+La estimación de la media la realizamos con:
+```
+t.test(nombredatos, mu=mediacontraste, conf.level=nivelconf) 
+```
+
+####  {.allowframebreaks}
+
+
+**Ejemplo:** Queremos comprobar si es cierto que la ingesta diaria energética en KJ  para 11 mujeres  con una determinada dieta se desvía significativamente de la cantidad recomendada de  7725 KJ.
+
+####  {.allowframebreaks}
+
+La variable aleatoria que estudiamos es *ingesta diaria energética en KJ para mujeres con una determinada dieta*.
+
+```{r}
+ingesta <- c(5260,5470,5640,6180,6390,
+             6515,6805,7515,7515,8230,8770)
+t.test(ingesta, mu=7725,conf.level=0.95)
+```
+```{r, echo=FALSE}
+intervalo <- t.test(ingesta, mu=7725)$conf.int
+mu0=7725
+```
+
+####  {.allowframebreaks}
+
+Con un 95 % de confianza podemos afirmar que la media de la ingesta diaria energética en KJ para mujeres con esta dieta está entre `r round(intervalo[[1]],digits=3)` kJ y `r round(intervalo[[2]],digits=3)` KJ, y por tanto es inferior a la cantidad recomendada de 7725 KJ en al menos `r round(mu0-intervalo[[2]],digits=3)` KJ. 
+
+####  {.allowframebreaks}
+
+Si queremos extraer únicamente los datos del intervalo de confianza podemos
+hacer:
+
+```{r}
+t.test(ingesta, mu=7725,conf.level=0.95)$conf.int
+```
+
+####  {.allowframebreaks}
+
+`t.test` hace por defecto, además del intervalo de confianza, un test de dos colas. El *p-valor* aparece en `p.value`. Para especificar el número de colas podemos usar la opción `alternative=` que puede tomar los valores:
+
+1. `"two.sided"` para un test de dos colas
+2. `"less"` para un test de una cola a la izda
+3. `"greater"`
+
+####  {.allowframebreaks}
+
+Así si en el ejemplo anterior quisieramos hacer un test de una cola a la izquierda escribiríamos:
+
+```{r}
+t.test(ingesta, mu=7725,conf.level=0.95, alternative="less")
+```
+
+Comparar el *p-valor* con el del ejemplo anterior.
+
+####  {.allowframebreaks}
+
+####  Método no paramétrico. Contraste de wilcoxon.  {.allowframebreaks} 
+Podemos realizar el contraste de los rangos con signo de Wilcoxon utilizando `wilcox.test()`
+
+
+```{r}
+wilcox.test(ingesta,mu=7725)
+```
+
+
+
+##  Comparación de medias:
+
+
+###  Muestras independientes.
+
+####  {.allowframebreaks}
+Ha habido una queja de que los medicos de cierta aseguradora pasa menos tiempo en media con los pacientes obesos. Tenemos los datos de una muestra en *tiempopeso.txt* donde la variable peso está codificada como *1="no_obeso"*, *2 = "obeso"*. En primer lugar leemos los datos.
+
+####  {.allowframebreaks}
+
+```{r}
+datosAseguradora <- read.table("tiempopeso.txt",
+                               header=TRUE)
+```
+
+
+La variable `Peso` no es un factor pero querríamos que lo fuese. Definimos Peso  como un factor.
+
+```{r}
+datosAseguradora$Peso <- factor(datosAseguradora$Peso,
+                              levels=1:2, 
+                              labels=c("no_obeso", "obeso"))
+str(datosAseguradora)
+```
+
+####  {.allowframebreaks}
+
+Comparamos los datos gráficamente con diagramas de cajas.
+
+Nota: para conseguir la virgulilla `~` en Windows has de: 
+
+1. presionar la tecla `Alt`.   
+2. sin soltar `Alt` introducir el numero `126` en el teclado numérico. 
+3. soltar la tecla `Alt`. 
+
+
+para conseguir la virgulilla `~` en OSX has de presionar la tecla `alt` y la tecla  `ñ` a la vez
+
+####  {.allowframebreaks}
+
+```{r, fig.height=4,fig.width=4}
+boxplot(Tiempo~Peso, data=datosAseguradora) 
+```
+
+####  {.allowframebreaks}
+
+En R la virgulilla `~`, se puede traducir como *según los valores de* por ejemplo, haz un boxplot de la variable Tiempo según los valores de la variable Peso.
+
+Notar que no hemos necesitado escribir `datosAseguradora$Tiempo` y `datosaseguradora$Peso`. En las expresiones
+que usen la virgulilla, se puede especificar el data frame incluyendo la opción `data = nombredeldataframe`
+
+####  {.allowframebreaks}
+
+¿Son las varianzas iguales?
+
+```{r}
+var.test(Tiempo~Peso, data=datosAseguradora)
+```
+
+
+
+####  {.allowframebreaks}
+
+El intervalo de confianza para el cociente de las varianzas nos muestra que este cociente puede valer uno y por tanto podemos considerar las variables iguales.
+
+Ahora podemos calcular el intervalo de confianza para comparar las medias con:
+
+```{r}
+t.test(Tiempo~Peso, var.equal=TRUE, data=datosAseguradora)
+```
+
+####  {.allowframebreaks}
+
+Dos observaciones:
+
+- por defecto `mu=0`, `conf.level=0.95`
+
+- por defecto R hace el test de Welch para varianzas distintas
+
+(si no ponemos nada va a tomar `var.equal=FALSE`). 
+
+
+
+###  Muestras independientes. Alternativa no paramétrica. Contraste de la suma de rangos de Wilcoxon (equiv U de Mann-Whitney)
+
+####  {.allowframebreaks}
+
+La alternativa no paramétrica a un test de hipótesis para muestras equivalentes es el contraste de la suma de rangos de wilcoxon que es equivalente al test U de Mann-Whitney.
+
+
+
+```{r}
+wilcox.test(Tiempo~Peso, data = datosAseguradora)
+```
+
+
+
+### Muestras emparejadas.
+
+####  {.allowframebreaks}
+
+Veamos un ejemplo con muestras emparejadas. Estudiamos el numero de accidentes de tráfico en 9 puntos negros antes y después de señalarlos como tales.
+
+
+```{r}
+Antes <- c(3,3,2,2,4,3,2,2,1)
+Despues <- c(3,2,1,1,2,1,1,1,2)
+accidentes=data.frame(Antes, Despues)
+rm(Antes,Despues)
+```
+
+####  {.allowframebreaks}
+
+
+Para hacer un test de muestras emparejadas, puedo o bien crear una nueva variable y aplicar un test de una sola variable.
+
+```{r, eval=FALSE}
+Diferencia=accidentes$Antes-accidentes$Despues
+t.test(Diferencia, mu=0, conf.level=0.95)
+```
+
+####  {.allowframebreaks}
+
+O directamente con la opción `paired=TRUE`.
+
+```{r}
+with(accidentes, t.test(Antes,Despues, paired=TRUE,
+                        conf.level=0.95))
+```
+
+
+### Muestras emparejadas.Alternativa no paramétrica. Contraste de la suma de rangos de Wilcoxon
+
+####  {.allowframebreaks}
+
+El método análogo no paramétrico se puede hacer con:
+
+```{r}
+with(accidentes, 
+     wilcox.test(Antes,Despues, paired=TRUE))
+```
+
+# Regresión y Correlación.
+
+## Regresión lineal simple
+
+####  {.allowframebreaks}
+
+El ejemplo que vamos a ver estudia como varía la tasa de crecimiento de unas plantas (en mm/semana)  con la humedad  del suelo. Los datos están en un archivo llamado `plant.growth.rate.csv`
+
+**Ejercicio:** Leer el archivo `plant.growth.rate.csv` en un data frame que llamaremos Estudio_Crecimiento
+
+####  {.allowframebreaks}
+
+```{r, echo=FALSE}
+Estudio_Crecimiento <- read.csv(file=
+                             "plant.growth.rate.csv")
+```
+
+En primer lugar vamos a cambiar los nombres de la variable a `humedad_suelo` y `tasa_crecimiento`
+
+\vskip5mm
+
+```{r}
+names(Estudio_Crecimiento) <- c("humedad_suelo", 
+                                "tasa_crecimiento")
+```
+
+
+
+
+### Diagrama de dispersión
+
+####  {.allowframebreaks}
+
+Ahora dibujaremos una nube de puntos para ver si podemos apreciar una tendencia lineal. 
+
+Es importante el orden de las variables:
+
+`tasa_crecimiento ~ humedad_suelo` 
+
+se entiende como *tasa de crecimiento en funcion de la humedad del suelo* donde 
+
+- `humedad_suelo` aparece en el eje X (variable independiente)
+
+- `tasa_crecimiento` en el eje  Y (variable dependiente) 
+
+En este caso:
+
+```{r, eval=FALSE}
+plot(tasa_crecimiento ~ humedad_suelo, 
+     data = Estudio_Crecimiento)
+```
+
+####  {.allowframebreaks}
+
+
+```{r, echo=FALSE}
+plot(tasa_crecimiento ~ humedad_suelo, 
+     data = Estudio_Crecimiento)
+```
+
+
+### Correlación
+
+####  {.allowframebreaks}
+
+Para calcular el coeficiente de correlación de Pearson de dos variables `x` e `y` usaremos `cor(x,y)`.
+
+
+Como estamos trabajando con un data frame utilizaremos la orden with
+
+```{r}
+with(Estudio_Crecimiento, 
+     cor(humedad_suelo, tasa_crecimiento) )
+```
+
+Obteniendo una buena correlación.
+
+
+### Recta de regresión
+
+####  {.allowframebreaks}
+
+Para calcular los coeficientes de la recta de regresión de la tasa de crecimiento en funcion de la humedad del suelo (cuidado con el orden de las variables) basta con hacer:
+
+```{r}
+recta = lm(tasa_crecimiento ~ humedad_suelo, 
+         data = Estudio_Crecimiento)
+```
+
+####  {.allowframebreaks}
+Podemos dibujar el gráfico anterior con la recta incluida.
+\vskip5mm
+
+```{r}
+plot(tasa_crecimiento ~ humedad_suelo, 
+     data = Estudio_Crecimiento)
+recta = lm(tasa_crecimiento ~ humedad_suelo, 
+         data = Estudio_Crecimiento)
+abline(recta)
+```
+
+####  {.allowframebreaks}
+
+Ahora exploramos que hay en recta:
+
+\vskip5mm 
+\scriptsize
+```{r}
+recta
+```
+\normalsize
+
+```{r, echo=FALSE}
+coef = recta$coefficients
+humedad_suelo = 1
+estimacion = coef[[1]]+coef[[2]]*humedad_suelo
+```
+
+####  {.allowframebreaks}
+
+La recta de regresión obtenida (redondeando) es
+
+$\mu_{Y|X} = `r round(coef[[1]],3)` + `r round(coef[[2]],3)` \cdot x$,
+
+donde $X$ es la variable predictora (humedad del suelo) e $Y$ es la variable dependiente (tasa de crecimiento) que queremos predecir. 
+
+Con ella podemos estimar valores desconocidos que estén en el rango de los datos obtenidos (en nuestro caso valores de humedad del suelo entre 0.25 y 2). 
+
+Por ejemplo para un valor de humedad del suelo de `r humedad_suelo`  obtenemos una estimación para la tasa de crecimiento  de $`r round(coef[[1]],3)` + `r round(coef[[2]],3)` \cdot `r humedad_suelo` = `r round(estimacion,3)`$ mm/semana.
+
+####  {.allowframebreaks}
+
+Podemos obtener valores de predicción con la orden `predict` (cuidado con la sintaxis)
+
+```{r}
+predict(recta, newdata = data.frame(humedad_suelo = 1))
+```
+
+
+Notar que no podemos extrapolar los datos más allá del rango de la muestra. 
+
+####  {.allowframebreaks}
+
+Podemos tener más información sobre los coeficientes con:
+
+\small
+```{r}
+summary(recta)
+```
+\normalsize
+
+####  {.allowframebreaks}
+Veamos  como calcular un intervalo de confianza para la media de kilos dado un peso (en azul) llamada en inglés *confidence band*, y para la predicción individual de kilos según peso (en rojo) llamada *prediction band*. Para calcularlas necesitaremos el siguiente código.
+
+\small
+```{r}
+recta=lm(tasa_crecimiento ~ humedad_suelo, 
+         data = Estudio_Crecimiento)
+
+datosaux= with(Estudio_Crecimiento,
+               seq(min(humedad_suelo),max(humedad_suelo),len=100))
+
+conf_interval <- predict(recta, 
+               newdata=data.frame(humedad_suelo = datosaux),
+               interval="confidence",level= 0.95)
+
+
+pred_interval <- predict(recta, 
+               newdata=data.frame(humedad_suelo = datosaux), 
+               interval="prediction",level = 0.95)
+```
+\normalsize
+
+Ahora dibujamos la nube de puntos, la recta de regresión, las bandas de confianza e intervalos de predicción.
+
+```{r}
+plot(tasa_crecimiento ~ humedad_suelo, 
+     data = Estudio_Crecimiento)
+abline(recta)
+
+lines(datosaux, conf_interval[,2], col="blue", lty=2)
+lines(datosaux, conf_interval[,3], col="blue", lty=2)
+
+lines(datosaux, pred_interval[,2], col="red", lty=3)
+lines(datosaux, pred_interval[,3], col="red", lty=3)
+```
+
+
+
+Se puede (y se debe) hacer mucho más para estudiar la bondad de nuestra recta para explicar los datos de la muestra: intervalos de confianza de los coeficientes, estudiar los residuos, por ejemplo podemos obtener unos diagnósticos para la regresión con:
+
+```{r, fig.width=10, fig.height=10}
+par(mfrow=c(2,2))
+plot(recta)
+```
+
+
+
+## Regresión Cuadrática.
+####  {.allowframebreaks}
+
+En algunas ocasiones se apreciará una tendencia entre nuestros datos que no será una recta: (Descargar de ADI *datcuad.txt*) Vemos una tendencia cuadrática clara en este ejemplo.
+
+```{r}
+datoscuadraticos=read.table("datcuad.txt")
+
+plot(dep~indep,data=datoscuadraticos)
+```
+
+
+```{r}
+parabola <- lm(dep~indep + I(indep^2), 
+               data=datoscuadraticos)
+parabola 
+```
+
+```{r, echo=FALSE}
+coef <- parabola$coefficients
+```
+
+ 
+De donde obtenemos:
+
+$\mu_{dep|indep}  = `r round(coef[[1]],3)` + `r round(coef[[2]],3)` \cdot indep  + `r round(coef[[3]],3)` \cdot indep^2$
+
+Podemos dibujar la nube de puntos y el ajuste con:
+```{r}
+plot(dep~indep, data=datoscuadraticos)
+datosaux <-  seq(min(datoscuadraticos$indep),
+                 max(datoscuadraticos$indep),
+                 len=100)
+lines(datosaux,predict(parabola,data.frame(indep=datosaux)))
+```
+
+
+Ahora podemos obtener el coeficiente de determinación $R^2$ con:
+```{r}
+summary(parabola)$r.squared
+```
+
+Obtenemos  $R^2 =$ `r summary(parabola)$r.squared`. El 99% de la variabilidad de la variable dependiente viene explicada por la variabilidad en la variable independiente.
+
+**Ejercicio:** Realizar una regresión cuadrática para el ejemplo anterior.
+
+
+
+# Estimación de proporciones
+
+####  {.allowframebreaks} 
+
+Veremos como estimar proporciones en datos categóricos con R.
+
+## Estimación de una proporción.
+
+####  {.allowframebreaks}
+
+Suponemos que tiramos una moneda y obtenemos 900 caras de 1000 tiradas. Todo parece indicar que la moneda está trucada. Podemos confirmar estadísticamente esto, realizando un intervalo de confianza para la proporcion, y el correspondiente test de hipótesis (por defecto de dos colas.)
+
+```{r}
+prop.test(900,1000, conf.level=0.95)
+```
+
+####  {.allowframebreaks}
+
+Recordamos que este test se basa en aproximar una binomial por una normal. R puede calcular el test binomial exacto.
+
+```{r}
+binom.test(900,1000, conf.level=0.95)
+```
+
+####  {.allowframebreaks}
+
+Si tenemos una variable que sea un factor con dos modalidades podemos hacer directamente el test de proporciones sobre una tabla. Veamos un ejemplo: Entre los directivos de 145 empresas biotecnológicas hay 88 hombres y 57 mujeres. ¿Puede ser esta diferencia debida al azar? Supongamos que nos dan los datos en un vector llamado sexo, con 1 para hombre y 2 para mujer.
+
+```{r}
+sexo <- factor(c(rep(1,88),rep(2,57)),levels=1:2, labels=c("hombre","mujer"))
+table(sexo)
+prop.test(table(sexo),conf.level=0.95)
+```
+
+Por defecto, si tenemos dos modalidades, R calcula un intervalo de confianza para la proporción de la primera modalidad, en este caso hombre.
+
+
+## Comparación de dos proporciones.
+
+####  {.allowframebreaks}
+
+La asignatura de bioestadística se divide en dos grupos, uno en inglés y otro en castellano. En el grupo de inglés 14 alumnos de un total de 38 obtienen un sobresaliente, mientras que en el grupo en castellano, 10 alumnos de un total de 40 obtienen un sobresaliente. Vamos a realizar un test de hipótesis para la igualdad de proporciones. De nuevo tenemos una variable cualitativa con dos modalidades (sacar un sobresaliente o no.)
+
+```{r}
+exitos <- c(14,10)
+nalumnos <- c(38,40)
+prop.test(exitos,nalumnos, conf.level=0.95)
+```
+
+Vemos que la diferencia observada en esta muestra no es significativa.
+
+
+## Tablas de Contingencia.
+
+####  Prueba de independencia.  {.allowframebreaks} 
+Realizamos una investigación sobre una nueva vacuna contra la gripe. Se elige una muestra aleatoria de 900 individuos y se clasifica a cada uno de ellos según haya contraído la gripe durante el último año o no, y según haya sido o no vacunado. Se recogen los datos descritos a continuación.
+
+```{r}
+gripe <- c(rep(1,450),rep(2,450))
+gripe <- factor(gripe, levels=1:2,labels=c("Si","No"))
+vacuna <- (c(rep(1,150),rep(2,300),rep(1,200),rep(2,250)))
+vacuna <- factor(vacuna,levels=1:2,labels=c("Si","No"))
+
+```
+
+####  {.allowframebreaks}
+
+Realizamos ahora la estadística descriptiva para estos datos mediante una tabla de contingencia y un diagrama de
+mosaico.
+
+```{r}
+table(vacuna, gripe)
+mosaicplot(table(vacuna,gripe), color = TRUE)
+```
+
+
+####  {.allowframebreaks}
+
+La orden summary ejecuta ahora un test chi cuadrado de independencia.
+
+```{r}
+summary(table(vacuna, gripe))
+```
+
+####  {.allowframebreaks}
+
+También lo hace la orden `chisq.test(table(), correct=FALSE)`
+
+```{r}
+chisq.test(table(vacuna,gripe),correct=FALSE)
+```
+
+####  {.allowframebreaks}
+La opción `r correct=TRUE` incluye la corrección de continuidad de Yates para tablas 2x2.
+es un poco más conservadora
+
+```{r}
+chisq.test(table(vacuna,gripe),correct=TRUE)
+```
+
+Por último con R podemos hacer el test exacto de Fischer para tablas 2x2. Esto será especialmente útil cuando alguna de las casillas tenga menos de 5 individuos.
+
+```{r}
+fisher.test(table(vacuna,gripe))
+```
+
+####  {.allowframebreaks} Prueba de homogeneidad.
+
+Veamos ahora un test de homogeneidad. En un estudio sobre la inclusión del huevo en la dieta se vió que la variable sexo jugaba un papel importante. El investigador pensó que el tipo de cocción preferido podría ser distinto en hombres y mujeres. Tomo una muestra de 25 mujeres a las que se preguntó como preferían ingerir el huevo: a) frito, b) tortilla, c) cocido, y se hizo lo mismo con una muestra de 17 hombres, obteniendo los siguientes resultados.
+
+```{r}
+mitabla <- matrix(c(5,9,12,3,7,5),ncol=3)
+colnames(mitabla)=c("frito","tortilla","cocido")
+rownames(mitabla)=c("Mujer","Hombre")
+mitabla
+mosaicplot(mitabla, color=TRUE)
+
+```
+
+####  {.allowframebreaks}
+
+Realizamos ahora el correspondiente test de homogeneidad
+
+```{r}
+chisq.test(mitabla)
+```
+
+####  {.allowframebreaks}
+
+Nos damos cuenta que aparece una advertencia de que el test puede no ser adecuado. Esto es debido a que tenemos tres casos con 5 individuos o menos de un total de 6 (más del 20%). R nos permite utilizar un método de montecarlo para encontrar un p-value.
+
+```{r}
+chisq.test(mitabla,simulate.p.value = TRUE, B = 10000)
+```
+
+
+
+# Análisis de la varianza 
+
+## Anova de una vía.
+
+####  {.allowframebreaks}
+Vamos a usar unos datos presentes en R. Se trata de un estudio sobre 6 insecticidas. Se dividió un área geográfica homogénea en 72 zonas del mismo tamaño. Se seleccionaron 12 zonas al azar para el insecticida A, de las restantes 12 para el insecticida B, de las restantes 12 para el insecticida C, etc hasta tener una asignación aleatoria de 12 zonas para cada insecticida. Los datos están guardados en InsectSrays.
+
+```{r}
+data(InsectSprays)
+str(InsectSprays)
+head(InsectSprays)
+```
+
+
+####  {.allowframebreaks}
+
+Vamos a realizar algunos estadísticos descriptivos por insecticida. Vamos a ver dos maneras de trabajar muy útiles en R.
+`with(dataframe,funcion(variables))` permite útilizar variables de un data frame sin necesidad de poner `dataframe$variable`, o usar `attach(dataframe)`.
+
+Por otra parte utilizaremos `tapply(variable, grupo, funcion)` que aplica una funcion a una variable según los valores de grupo, una variable cualitativa.
+
+Por ejemplo vamos a calcular la media, desviación estardar, y tamaño muestral de la variable `count` según el tipo de insecticida codificado en la variable `spray`:
+
+####  {.allowframebreaks}
+
+```{r}
+with(InsectSprays,tapply(count,spray,mean))
+with(InsectSprays,tapply(count,spray,sd))
+with(InsectSprays,tapply(count,spray,length))
+```
+
+####  {.allowframebreaks} 
+Hay otra función en R `aggregate` que hace el mismo cálculo.
+```{r}
+aggregate(count~spray, data=InsectSprays, FUN= mean)
+```
+Podemos conseguir una tabla con todos los objetos calculados del siguiente modo:
+```{r}
+do.call(data.frame, 
+        aggregate(count~spray, 
+                  data=InsectSprays,  
+                  FUN = function(x) c(m = mean(x), 
+                                     s = sd(x), 
+                                     n=length(x))))
+```
+
+Pero la orden se hace más y más ininteligible. Veremos como resolver este problema con dplyr.
+
+####  {.allowframebreaks}
+
+Ahora dibujamos los correspondientes diagramas de caja. Vemos como boxplot nos permite una alternativa a `with(...)` usando 
+`boxplot(...,data=InsectSprays)`. Hay muchas funciones en R que permiten especificar el dataframe como opción con `data=nombredataframe`.
+El resultado es el mismo que el que obtendríamos usando `with(InsectSprays,boxplot(count~spray))`
+
+
+```{r,eval=FALSE}
+ boxplot(count ~ spray, data=InsectSprays)
+```
+
+####  {.allowframebreaks}
+
+```{r,echo=FALSE}
+ boxplot(count ~ spray, data=InsectSprays)
+```
+
+
+En este gráfico se aprecia que no se cumplen los requisitos para una ANOVA. Algunas distribuciones no son simétricas, hay bastantes outlayers, y además las varianzas parecen bastante distintas.
+
+Aún así realizaremos una ANOVA para ver cual sería el procedimiento. Hay varias maneras de realizar una ANOVA con R.
+
+```{r}
+salida.aov = aov(count ~ spray, data=InsectSprays)
+summary(salida.aov)
+```
+
+Otra manera es utilizar la orden `oneway.test()` que hace la corrección de Welch para varianzas distintas (pero requiere normalidad)
+
+```{r}
+oneway.test(count~spray, data=InsectSprays)
+```
+
+El resultado difiere del anterior por la corrección de Welch. Si ponemos la opción `var.equal=TRUE` obtendremos los mismos resultados que con `aov`
+```{r}
+oneway.test(count~spray, data=InsectSprays, var.equal=TRUE)
+```
+
+Una tercera manera es utilizar un modelo lineal con `lm` y después utilizar la orden `anova()` sobre la salida del modelo. En realidad esto es lo que hace la orden
+aov internamente. En una anova de una vía con una variable *tratamiento* y una variable *respuesta* haremos `lm(respuesta~tratamiento)`. Estamos haciendo una regresión donde la variable respuesta es cuantitativa y la variable tratamiento es cuantitativa.
+
+```{r}
+
+modelo=lm(count~spray, data=InsectSprays)
+anova(modelo)
+
+```
+
+
+### Test Post-Hoc
+
+####  {.allowframebreaks}
+
+Si queremos ahora ver que grupos son significativamente distintos, podemos hacer un test Post Hoc. Se pueden hacer estos tests con el comando `pairwise.t.test(variable,grupo)`. Este método nos permite hacer distintas correcciones con `p.adjust=` Por ejemplo para realizar la corrección de Bonferroni realizaríamos:
+
+```{r}
+with(InsectSprays, 
+     pairwise.t.test(count,spray,p.adj="bonferroni"))
+```
+
+
+En R el test HSD de Tuckey (Honest Significant Difference) que nos da intervalos de confianza corregidos par las diferencias de medias para cada par de grupos.
+```{r}
+TukeyHSD(salida.aov)
+plot(TukeyHSD(salida.aov),las=1) 
+```
+
+`las` nos dice como son las etiquetas de las con respecto a los ejes puede tomar los valores: 0=paralelas, 1=todas horizontales, 2=todas perpendiculares a los ejes, 3=todas verticales)
+
+
+Podemos obtener tambien información examinando el modelo lineal
+
+```{r}
+summary(modelo)
+```
+
+
+Otros métodos para comparaciones múltiples se pueden encontrar en el paquete `multcomp`.
+
+
+### Verificando las condiciones
+
+####  {.allowframebreaks}
+
+Una manera formal de probar si las varianzas son iguales es el test de Bartlett.
+
+```{r}
+bartlett.test(count ~ spray, data=InsectSprays)
+```
+
+No podemos asegurar que las varianzas son iguales.
+
+Podemos obtener una serie de diagnósticos de un test de anova con `plot(salida.aov)`
+
+```{r}
+plot(salida.aov, 1)
+```
+
+Nos da un gráfico de la distribución de los residuos. Idealmente ha de mostrar la misma  dispersión en cada valor. Aquí se aprecia un preocupante aumento en la dispersión de los residuos para valores grandes. 
+
+
+
+```{r}
+plot(salida.aov, 2)
+```
+
+Nos da un gráfico cuantil-cuantil que compara la distribución de los residuos con una normal. Vemos que en las colas se aleja de una normal.
+
+### Alternativa no paramétrica. Test de Kruskal-Wallis.
+
+####  {.allowframebreaks}
+
+La alternativa no paramétrica es el test de Kruskall-Wallis. Este test necesita que todas las distribuciones sean similares y que haya homogeneidad de varianzas.
+```{r}
+kruskal.test(count ~ spray, data=InsectSprays)
+```
+
+
+### Transformaciones de los datos
+
+####  {.allowframebreaks}
+
+Cuando nuestros datos no cumplen las condiciones para un test (normalidad, igualdad de varianzas), podemos aplicar transformaciones a nuestros datos $Y'=f(Y)$ para que si las cumplan y realizar los tests sobre los datos transformados. Habrá que tener especial cuidado a la hora de interpretar los resultados pues nos interesan resultados sobre los datos sin transformar. 
+
+Las transformaciones más habituales son:
+
+* $Y'=\log(Y)$  Transformación válida para valores positivos o $Y'=\log(Y+1)$ si los datos incluyen al 0. La media aritmética queda transformada en media geométrica. Algunos casos en los que esta transformación es útil comprenden cuando las medidas son cocientes o productos de variables o cuando la distribución de los datos tiene una cola a la derecha o cuando el grupo que tiene la media mayor también tiene la desviación estandar mayor o cuando los datos comprenden varios ordenes de magnitud.
+* $Y'={\rm logit}(Y)$ Usada fundamentalmente para proporciones.
+* $Y'=\sqrt{Y+a}$ donde  $a$ puede tomar los valores 0, 1/2 o 1 según los datos. Usada cuando los datos son conteos.
+
+Hay muchas otras transformaciones posibles, pero hay que tener cuidado a la hora de probar distintas transformaciones porque podríamos incurrir en los mismos problemas que al hacer comparaciones múltiples (Incremento del error de tipo I)
+
+
+En los datos de InsectSpray si hacemos:
+
+```{r}
+bartlett.test(sqrt(count) ~ spray, data=InsectSprays)
+with(InsectSprays,boxplot(sqrt(count) ~ spray))
+salida.aov2 <- aov(sqrt(count) ~ spray, data = InsectSprays)
+summary(salida.aov2)
+plot(salida.aov2,1)
+plot(salida.aov2,2)
+```
+
+## Anova de dos vías.
+
+####  {.allowframebreaks}
+
+En el fichero *quinn.csv* encontramos datos sobre los efectos que tienen la estación del año y la densidad de ejemplares adultos en
+la producción de huevos de la especie *Sinphonaria Diemenensis*
+
+\let\oldverbatim\verbatim
+\let\endoldverbatim\endverbatim
+\renewenvironment{verbatim}{\footnotesize\oldverbatim}{\endoldverbatim}
+
+```{r}
+quinn=read.csv("quinn.csv")
+str(quinn)
+```
+
+Este conjunto de datos es típico de un ANOVA con dos factores (y efectos  fijos). Tenemos una variable (respuesta) cuantitativa, que es la producción de huevos (la tercera columna de los datos). Y queremos estudiar la relación de esa variable con dos variables (explicativas), que son la la densidad de adultos y la estación (primera y segunda columnas, respectivamente).  
+
+Se trata de dos variables cualitativas o factores. Esto es especialmente evidente en el caso de la variable SEASON, que tiene dos niveles (spring y summer). Vemos que la variable DENSITY no es un factor, así que la transformamos en uno. 
+
+
+```{r}
+quinn.aov = aov(EGGS ~ SEASON + DENSITY, data = quinn)
+anova(quinn.aov)
+```
+
+Podemos hacer un estudio factorial (viendo las posibles interacciones)
+
+```{r}
+quinn.aov = aov(EGGS ~ SEASON * DENSITY, data = quinn)
+anova(quinn.aov)
+with(quinn,interaction.plot(DENSITY, SEASON, EGGS))
+
+```
+
+El factor DENSITY se muestra en el eje horizontal, la respuesta EGGS en el eje vertical, y cada uno de los dos factores de SEASON se muestra como una línea que conecta los correspondientes valores. 
+
+En un caso ideal, la ausencia completa de interacción correspondería a dos líneas perfectamente paralelas en este gráfico (y la existencia de interacción es evidente cuando las líneas se cruzan). 
+
+En la práctica, el paralelismo en general está lejos de ser perfecto. No obstante, la gráfica de este ejemplo sí parece indicar que no existe interacción entre ambos factores. Y en cualquier caso, tenemos los resultados de la tabla ANOVA para corroborarlo.
+

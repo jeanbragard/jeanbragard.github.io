@@ -1,0 +1,6 @@
+"peso5" "altura5" "sexo5" "gruposang5" "estfis5"
+"1" 64 1.55 "mujer" "A" "bien"
+"2" 79 1.78 "hombre" "B" "bien"
+"3" 69 1.67 "mujer" "A" "mal"
+"4" 77 1.78 "hombre" "A" "regular"
+"5" 91 1.93 "hombre" "O" "regular"
